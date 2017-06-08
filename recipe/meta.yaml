@@ -18,7 +18,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [win or osx]
+  skip: True  # [win]
   features:
     - blas_{{ variant }}
 
