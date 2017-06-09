@@ -17,7 +17,7 @@ source:
     - patch-qscintilla2.diff
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   features:
     - blas_{{ variant }}
@@ -33,7 +33,7 @@ requirements:
     - pcre 8.37
     - readline 6.2*
     - arpack 3.4.*
-    - curl 7.48.*
+    - curl 7.*
     - fftw 3.3.*
     - fontconfig 2.12.*
     - freetype 2.7|2.7.*
