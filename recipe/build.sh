@@ -15,7 +15,7 @@ chmod +x build-aux/mk-opts.pl
     --enable-dl \
     --without-qhull \
     --without-qrupdate \
-    --with-qt=4 \
+    --with-qt=5 \
     --without-magick \
     --without-opengl \
     --without-framework-opengl \
