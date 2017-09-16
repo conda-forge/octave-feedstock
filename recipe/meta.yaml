@@ -17,7 +17,7 @@ source:
     - patch-qscintilla2.diff
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
   features:
     - blas_{{ variant }}
@@ -36,12 +36,12 @@ requirements:
     - curl 7.*
     - fftw 3.3.*
     - fontconfig 2.12.*
-    - freetype 2.7|2.7.*
-    - glpk 4.61
+    - freetype 2.7
+    - glpk 4.61|4.62
     - gnuplot 5.0.*
-    - hdf5 1.8.17|1.8.17.*
+    - hdf5 1.8.18|1.8.18.*
     - suitesparse 4.5.*
-    - zlib 1.2.*
+    - zlib 1.2.8
     - bzip2 1.0.*
     - portaudio 19
     - libsndfile 1.0.27
@@ -64,12 +64,12 @@ requirements:
     - curl 7.*
     - fftw 3.3.*
     - fontconfig 2.12.*
-    - freetype 2.7|2.7.*
-    - glpk 4.61
+    - freetype 2.7
+    - glpk 4.61|4.62
     - gnuplot 5.0.*
-    - hdf5 1.8.17|1.8.17.*
+    - hdf5 1.8.18|1.8.18.*
     - suitesparse 4.5.*
-    - zlib 1.2.*
+    - zlib 1.2.8
     - bzip2 1.0.*
     - portaudio 19
     - libsndfile >=1.0.27,<1.1
