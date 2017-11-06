@@ -17,7 +17,7 @@ source:
     - patch-qscintilla2.diff
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win]
   features:
     - blas_{{ variant }}
@@ -41,7 +41,7 @@ requirements:
     - gnuplot 5.0.*
     - hdf5 1.8.18|1.8.18.*
     - suitesparse 4.5.*
-    - zlib 1.2.8
+    - zlib 1.2.11
     - bzip2 1.0.*
     - portaudio 19
     - libsndfile 1.0.27
@@ -51,7 +51,7 @@ requirements:
     - ncurses 5.9*
     - xz 5.2.*
     - libxml2 2.9.*
-    - libpng >=1.6.28,<1.7
+    - libpng >=1.6.22,<1.6.31
     - glib 2.51.*
     - qt 5.6.*
     - openssl 1.0.*
@@ -69,7 +69,7 @@ requirements:
     - gnuplot 5.0.*
     - hdf5 1.8.18|1.8.18.*
     - suitesparse 4.5.*
-    - zlib 1.2.8
+    - zlib 1.2.11
     - bzip2 1.0.*
     - portaudio 19
     - libsndfile >=1.0.27,<1.1
@@ -79,7 +79,7 @@ requirements:
     - ncurses 5.9*
     - xz 5.2.*
     - libxml2 2.9.*
-    - libpng >=1.6.28,<1.7
+    - libpng >=1.6.22,<1.6.31
     - glib 2.51.*
     - qt 5.6.*
     - openssl 1.0.*
@@ -88,8 +88,8 @@ requirements:
 test:
   commands:
     - octave --version
-    - conda inspect linkages -p $PREFIX octave  # [not win]
-    - conda inspect objects -p $PREFIX octave   # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME   # [osx]
 
 about:
   home: https://www.gnu.org/software/octave/
