@@ -17,7 +17,7 @@ source:
     - patch-qscintilla2.diff
 
 build:
-  number: 4
+  number: 5
   skip: True  # [win]
   features:
     - blas_{{ variant }}
@@ -28,7 +28,7 @@ requirements:
     - gcc          # [osx]
     - sed
     - perl 5.20.3.1
-    - openblas 0.2.19|0.2.19.*
+    - openblas 0.2.20|0.2.20.*
     - blas 1.1 {{ variant }}
     - pcre 8.37
     - readline 6.2*
@@ -56,7 +56,7 @@ requirements:
     - qt 5.6.*
     - openssl 1.0.*
   run:
-    - openblas 0.2.19|0.2.19.*
+    - openblas 0.2.20|0.2.20.*
     - blas 1.1 {{ variant }}
     - pcre >=8.37,<9
     - readline 6.2*
