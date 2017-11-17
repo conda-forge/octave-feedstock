@@ -32,7 +32,7 @@ requirements:
     - blas 1.1 {{ variant }}
     - pcre 8.37
     - readline 6.2*
-    - arpack 3.4.*
+    - arpack 3.5.*
     - curl 7.*
     - fftw 3.3.*
     - fontconfig 2.12.*
@@ -60,7 +60,7 @@ requirements:
     - blas 1.1 {{ variant }}
     - pcre >=8.37,<9
     - readline 6.2*
-    - arpack 3.4.*
+    - arpack 3.5.*
     - curl 7.*
     - fftw 3.3.*
     - fontconfig 2.12.*
