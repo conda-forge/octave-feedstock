@@ -1,0 +1,79 @@
+arpack:
+- '3.5'
+bzip2:
+- '1'
+c_compiler:
+- toolchain_c
+curl:
+- '7.59'
+cxx_compiler:
+- toolchain_cxx
+fontconfig:
+- '2.13'
+fortran_compiler:
+- toolchain_fort
+freetype:
+- 2.8.1
+glib:
+- '2.55'
+glpk:
+- '4.65'
+hdf5:
+- 1.10.2
+icu:
+- '58'
+libpng:
+- 1.6.34
+libxml2:
+- '2.9'
+ncurses:
+- '6.1'
+openblas:
+- 0.2.20
+openssl:
+- 1.0.2
+pin_run_as_build:
+  arpack:
+    max_pin: x.x
+  bzip2:
+    max_pin: x
+  curl:
+    max_pin: x
+  fontconfig:
+    max_pin: x
+  freetype:
+    max_pin: x.x
+  glib:
+    max_pin: x.x
+  glpk:
+    max_pin: x.x
+  hdf5:
+    max_pin: x.x.x
+  icu:
+    max_pin: x
+  libpng:
+    max_pin: x.x
+  libxml2:
+    max_pin: x.x
+  ncurses:
+    max_pin: x.x
+  openblas:
+    max_pin: x.x.x
+  openssl:
+    max_pin: x.x.x
+  qt:
+    max_pin: x.x
+  readline:
+    max_pin: x
+  xz:
+    max_pin: x.x
+  zlib:
+    max_pin: x.x
+qt:
+- '5.6'
+readline:
+- '7.0'
+xz:
+- '5.2'
+zlib:
+- '1.2'
