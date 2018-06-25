@@ -24,66 +24,67 @@ build:
 
 requirements:
   build:
-    - toolchain
-    - gcc          # [osx]
-    - sed
     - perl 5.20.3.1
-    - openblas 0.2.20|0.2.20.*
+    - {{ compiler('fortran') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - sed
+    - openblas
     - blas 1.1 {{ variant }}
     - pcre 8.37
-    - readline 7.0
-    - arpack 3.5.*
-    - curl >=7.44.0,<8
+    - readline
+    - arpack
+    - curl
     - fftw 3.3.*
-    - fontconfig 2.12.*
-    - freetype 2.8.1
-    - glpk 4.61|4.62
+    - fontconfig
+    - freetype
+    - glpk
     - gnuplot 5.2.*
-    - hdf5 1.10.1
+    - hdf5
     - suitesparse 4.5.*
-    - zlib 1.2.11
-    - bzip2 1.0.*
+    - zlib
+    - bzip2
     - portaudio 19
     - libsndfile 1.0.27
     - qscintilla2 2.9.*
     # Following gets linked at the end.
-    - icu 58.*
-    - ncurses 5.9
-    - xz 5.2.*
-    - libxml2 2.9.*
-    - libpng >=1.6.32,<1.6.35
-    - glib 2.55.*
-    - qt 5.6.*
-    - openssl 1.0.*
+    - icu
+    - ncurses
+    - xz
+    - libxml2
+    - libpng
+    - glib
+    - qt
+    - openssl
   run:
-    - openblas 0.2.20|0.2.20.*
+    - openblas
     - blas 1.1 {{ variant }}
     - pcre >=8.37,<9
-    - readline 7.0
-    - arpack 3.5.*
-    - curl >=7.44.0,<8
+    - readline
+    - arpack
+    - curl
     - fftw 3.3.*
-    - fontconfig 2.12.*
-    - freetype 2.8.1
-    - glpk 4.61|4.62
+    - fontconfig
+    - freetype
+    - glpk
     - gnuplot 5.2.*
-    - hdf5 1.10.1
+    - hdf5
     - suitesparse 4.5.*
-    - zlib 1.2.11
-    - bzip2 1.0.*
+    - zlib
+    - bzip2
     - portaudio 19
     - libsndfile >=1.0.27,<1.1
     - qscintilla2 2.9.*
     # Following gets linked at the end.
-    - icu 58.*
-    - ncurses 5.9
-    - xz 5.2.*
-    - libxml2 2.9.*
-    - libpng >=1.6.32,<1.6.35
-    - glib 2.55.*
-    - qt 5.6.*
-    - openssl 1.0.*
-    - libgfortran    # [osx]
+    - icu
+    - ncurses
+    - xz
+    - libxml2
+    - libpng
+    - glib
+    - qt
+    - openssl
 
 test:
   commands:
