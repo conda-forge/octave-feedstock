@@ -24,18 +24,13 @@ build:
 
 requirements:
   build:
-    - perl 5.20.3.1
+    - perl
+    - sed
     - {{ compiler('fortran') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - sed
     - openblas
-    - toolchain
-    - gcc          # [osx]
-    - sed
-    - perl
-    - openblas 0.2.20|0.2.20.*
     - blas 1.1 {{ variant }}
     - pcre 8.37
     - readline
