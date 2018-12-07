@@ -1,42 +1,48 @@
 arpack:
-- '3.5'
+- 3.6.3
 bzip2:
 - '1'
 c_compiler:
 - toolchain_c
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
 curl:
 - '7.59'
 cxx_compiler:
 - toolchain_cxx
+docker_image:
+- condaforge/linux-anvil
 fontconfig:
 - '2.13'
 fortran_compiler:
 - toolchain_fort
 freetype:
-- 2.8.1
+- 2.9.1
 glib:
-- '2.55'
+- '2.56'
 glpk:
 - '4.65'
 hdf5:
-- 1.10.2
+- 1.10.4
 icu:
 - '58'
 libpng:
-- 1.6.34
+- 1.6.35
 libxml2:
 - '2.9'
 ncurses:
 - '6.1'
 openblas:
-- 0.2.20
+- 0.3.3
 openssl:
 - 1.0.2
 perl:
 - '5.26'
 pin_run_as_build:
   arpack:
-    max_pin: x.x
+    max_pin: x.x.x
   bzip2:
     max_pin: x
   curl:
@@ -44,13 +50,11 @@ pin_run_as_build:
   fontconfig:
     max_pin: x
   freetype:
-    max_pin: x.x
+    max_pin: x
   glib:
     max_pin: x.x
   glpk:
     max_pin: x.x
-  hdf5:
-    max_pin: x.x.x
   icu:
     max_pin: x
   libpng:
