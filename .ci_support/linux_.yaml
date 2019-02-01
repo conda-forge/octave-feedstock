@@ -14,6 +14,8 @@ docker_image:
 - condaforge/linux-anvil-comp7
 fontconfig:
 - '2.13'
+fortran_compiler:
+- gfortran
 freetype:
 - 2.9.1
 glib:
