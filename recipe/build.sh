@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-export CPPFLAGS="-I${PREFIX}/include -I${BUILD_PREFIX}/${HOST}/sysroot/usr/include ${CPPFLAGS}"
-export CXXFLAGS="-I${PREFIX}/include -I${BUILD_PREFIX}/${HOST}/sysroot/usr/include ${CXXFLAGS}"
-export LDFLAGS="-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib ${LDFLAGS}"
+export CPPFLAGS="-I${PREFIX}/include ${CPPFLAGS}"
 
 chmod +x configure
 chmod +x build-aux/mk-opts.pl
@@ -13,6 +11,7 @@ chmod +x build-aux/mk-opts.pl
     --enable-readline \
     --enable-shared \
     --with-lapack="-lopenblas" \
+    --with-fltk-prefix=$PREFIX \
     --enable-dl \
     --without-qrupdate \
     --with-qt=5 \
