@@ -42,6 +42,7 @@ requirements:
     - {{ cdt('libxext') }}  # [linux]
     - {{ cdt('libxrender') }}  # [linux]
     - {{ cdt('libxt') }}  # [linux]
+    - {{ cdt('libxft') }}  # [linux]
     - {{ cdt('libx11-devel') }}  # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - pcre
@@ -60,6 +61,8 @@ requirements:
     - portaudio
     - libsndfile
     - qscintilla2
+    - qhull
+    - graphicsmagick
     # Following gets linked at the end.
     - icu
     - ncurses
@@ -88,6 +91,8 @@ requirements:
     - {{ pin_compatible("portaudio") }}
     - libsndfile
     - {{ pin_compatible("qscintilla2", max_pin="x.x") }}
+    - qhull
+    - {{ pin_compatible("graphicsmagick") }}
     # Following gets linked at the end.
     - icu
     - ncurses
