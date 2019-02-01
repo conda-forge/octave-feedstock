@@ -14,10 +14,9 @@ chmod +x build-aux/mk-opts.pl
     --enable-shared \
     --with-lapack="-lopenblas" \
     --enable-dl \
-    --without-qhull \
     --without-qrupdate \
     --with-qt=5 \
-    --without-magick \
+    --with-magick=GraphicsMagick \
     --without-opengl \
     --without-framework-opengl \
     --without-framework-carbon \
