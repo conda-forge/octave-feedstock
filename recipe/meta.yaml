@@ -63,7 +63,7 @@ requirements:
     - libsndfile
     - qscintilla2
     - qhull
-    - graphicsmagick
+    - graphicsmagick   # [linux]
     # Following gets linked at the end.
     - icu
     - ncurses
@@ -93,7 +93,7 @@ requirements:
     - libsndfile
     - {{ pin_compatible("qscintilla2", max_pin="x.x") }}
     - qhull
-    - {{ pin_compatible("graphicsmagick") }}
+    - {{ pin_compatible("graphicsmagick") }}   # [linux]
     # Following gets linked at the end.
     - icu
     - ncurses
