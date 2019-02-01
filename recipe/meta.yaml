@@ -28,9 +28,6 @@ requirements:
     - {{ compiler('fortran') }}
     - sed
     - perl
-  host:
-    - openblas
-    - blas 1.1 {{ variant }}
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
@@ -45,6 +42,9 @@ requirements:
     - {{ cdt('libxft') }}  # [linux]
     - {{ cdt('libx11-devel') }}  # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+  host:
+    - openblas
+    - blas 1.1 {{ variant }}
     - pcre
     - readline
     - arpack
