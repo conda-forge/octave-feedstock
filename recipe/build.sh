@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-export CPPFLAGS="-I${PREFIX}/include ${CPPFLAGS}"
+export CPPFLAGS="-I${PREFIX}/include -I${BUILD_PREFIX}/${HOST}/sysroot/usr/include ${CPPFLAGS}"
+export CXXFLAGS="-I${PREFIX}/include -I${BUILD_PREFIX}/${HOST}/sysroot/usr/include ${CXXFLAGS}"
 export LDFLAGS="-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib ${LDFLAGS}"
 
 chmod +x configure
