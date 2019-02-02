@@ -17,79 +17,96 @@ source:
     - patch-qscintilla2.diff
 
 build:
-  number: 7
+  number: 8
   skip: True  # [win]
   features:
     - blas_{{ variant }}
 
 requirements:
   build:
-    - toolchain
-    - gcc          # [osx]
+    - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
     - sed
     - perl
-    - openblas 0.2.20|0.2.20.*
+    - pkg-config  # [linux]
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+    - {{ cdt('libselinux') }}  # [linux]
+    - {{ cdt('libxdamage') }}  # [linux]
+    - {{ cdt('libxfixes') }}  # [linux]
+    - {{ cdt('libxxf86vm') }}  # [linux]
+    - {{ cdt('libxcb') }}  # [linux]
+    - {{ cdt('expat') }}  # [linux]
+    - {{ cdt('libxext') }}  # [linux]
+    - {{ cdt('libxrender') }}  # [linux]
+    - {{ cdt('libxt') }}  # [linux]
+    - {{ cdt('libxft') }}  # [linux]
+    - {{ cdt('libx11-devel') }}  # [linux]
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+  host:
+    - openblas
     - blas 1.1 {{ variant }}
-    - pcre 8.37
-    - readline 7.0
-    - arpack 3.5.*
-    - curl >=7.44.0,<8
-    - fftw 3.3.*
-    - fontconfig 2.12.*
-    - freetype 2.8.1
-    - glpk 4.61|4.62
-    - gnuplot 5.2.*
-    - hdf5 1.10.1
-    - suitesparse 4.5.*
-    - zlib 1.2.11
-    - bzip2 1.0.*
-    - portaudio 19
-    - libsndfile 1.0.27
-    - qscintilla2 2.9.*
+    - pcre
+    - readline
+    - arpack
+    - curl
+    - fftw
+    - fontconfig
+    - freetype
+    - glpk
+    - gnuplot
+    - hdf5
+    - suitesparse
+    - zlib
+    - bzip2
+    - portaudio
+    - libsndfile
+    - qscintilla2
+    - qhull
+    - graphicsmagick   # [linux]
     # Following gets linked at the end.
-    - icu 58.*
-    - ncurses 5.9
-    - xz 5.2.*
-    - libxml2 2.9.*
-    - libpng >=1.6.32,<1.6.35
-    - glib 2.55.*
-    - qt 5.6.*
-    - openssl 1.0.*
+    - icu
+    - ncurses
+    - xz
+    - libxml2
+    - libpng
+    - glib
+    - qt
+    - openssl
   run:
-    - openblas 0.2.20|0.2.20.*
+    - openblas
     - blas 1.1 {{ variant }}
-    - pcre >=8.37,<9
-    - readline 7.0
-    - arpack 3.5.*
-    - curl >=7.44.0,<8
-    - fftw 3.3.*
-    - fontconfig 2.12.*
-    - freetype 2.8.1
-    - glpk 4.61|4.62
-    - gnuplot 5.2.*
-    - hdf5 1.10.1
-    - suitesparse 4.5.*
-    - zlib 1.2.11
-    - bzip2 1.0.*
-    - portaudio 19
-    - libsndfile >=1.0.27,<1.1
-    - qscintilla2 2.9.*
+    - pcre
+    - readline
+    - arpack
+    - curl
+    - {{ pin_compatible("fftw", max_pin="x.x") }}
+    - fontconfig
+    - freetype
+    - glpk
+    - gnuplot
+    - hdf5
+    - {{ pin_compatible("suitesparse", max_pin="x.x") }}
+    - zlib
+    - bzip2
+    - {{ pin_compatible("portaudio") }}
+    - libsndfile
+    - {{ pin_compatible("qscintilla2", max_pin="x.x") }}
+    - qhull
+    - {{ pin_compatible("graphicsmagick") }}   # [linux]
     # Following gets linked at the end.
-    - icu 58.*
-    - ncurses 5.9
-    - xz 5.2.*
-    - libxml2 2.9.*
-    - libpng >=1.6.32,<1.6.35
-    - glib 2.55.*
-    - qt 5.6.*
-    - openssl 1.0.*
-    - libgfortran    # [osx]
+    - icu
+    - ncurses
+    - xz
+    - libxml2
+    - libpng
+    - glib
+    - qt
+    - openssl
 
 test:
   commands:
     - octave --version
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME   # [osx]
 
 about:
   home: https://www.gnu.org/software/octave/

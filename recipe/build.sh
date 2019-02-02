@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 export CPPFLAGS="-I${PREFIX}/include ${CPPFLAGS}"
-export LDFLAGS="-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib ${LDFLAGS}"
 
 chmod +x configure
 chmod +x build-aux/mk-opts.pl
@@ -12,13 +11,11 @@ chmod +x build-aux/mk-opts.pl
     --enable-readline \
     --enable-shared \
     --with-lapack="-lopenblas" \
+    --without-fltk \
     --enable-dl \
-    --without-qhull \
     --without-qrupdate \
     --with-qt=5 \
-    --without-magick \
-    --without-opengl \
-    --without-framework-opengl \
+    --with-magick=GraphicsMagick \
     --without-framework-carbon \
     --with-hdf5-includedir=${PREFIX}/include \
     --with-hdf5-libdir=${PREFIX}/lib
