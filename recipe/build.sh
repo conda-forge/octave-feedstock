@@ -16,8 +16,6 @@ chmod +x build-aux/mk-opts.pl
     --without-qrupdate \
     --with-qt=5 \
     --with-magick=GraphicsMagick \
-    --without-opengl \
-    --without-framework-opengl \
     --without-framework-carbon \
     --with-hdf5-includedir=${PREFIX}/include \
     --with-hdf5-libdir=${PREFIX}/lib
