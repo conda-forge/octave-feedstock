@@ -11,7 +11,7 @@ chmod +x build-aux/mk-opts.pl
     --enable-readline \
     --enable-shared \
     --with-lapack="-lopenblas" \
-    --with-fltk-prefix=$PREFIX \
+    --without-fltk \
     --enable-dl \
     --without-qrupdate \
     --with-qt=5 \
