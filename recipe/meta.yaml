@@ -28,7 +28,7 @@ requirements:
     - {{ compiler('fortran') }}
     - sed
     - perl
-    - pkg-config
+    - pkg-config  # [linux]
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
