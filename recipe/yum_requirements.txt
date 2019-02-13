@@ -8,3 +8,5 @@ libxcb
 libXft
 expat
 xorg-x11-proto
+GraphicsMagick-devel
+GraphicsMagick-c++-devel
