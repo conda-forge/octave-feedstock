@@ -1,5 +1,4 @@
 {% set version = "4.2.1" %}
-{% set variant = "openblas" %}
 
 package:
   name: octave
@@ -17,10 +16,9 @@ source:
     - patch-qscintilla2.diff
 
 build:
-  number: 8
+  number: 9
   skip: True  # [win]
   features:
-    - blas_{{ variant }}
 
 requirements:
   build:
@@ -44,8 +42,8 @@ requirements:
     - {{ cdt('libx11-devel') }}  # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
   host:
-    - openblas
-    - blas 1.1 {{ variant }}
+    - libblas
+    - libcblas
     - pcre
     - readline
     - arpack
@@ -74,8 +72,6 @@ requirements:
     - qt
     - openssl
   run:
-    - openblas
-    - blas 1.1 {{ variant }}
     - pcre
     - readline
     - arpack
