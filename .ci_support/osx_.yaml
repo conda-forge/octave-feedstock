@@ -27,7 +27,7 @@ glib:
 glpk:
 - '4.65'
 hdf5:
-- 1.10.4
+- 1.10.5
 icu:
 - '58'
 libpng:
@@ -41,7 +41,7 @@ macos_min_version:
 ncurses:
 - '6.1'
 openblas:
-- 0.3.3
+- 0.3.6
 openssl:
 - 1.1.1a
 perl:
@@ -84,7 +84,7 @@ pin_run_as_build:
 qt:
 - '5.9'
 readline:
-- '7.0'
+- '8.0'
 xz:
 - '5.2'
 zlib:
