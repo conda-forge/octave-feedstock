@@ -30,14 +30,20 @@ hdf5:
 - 1.10.5
 icu:
 - '58'
+libblas:
+- 3.8 *netlib
+libcblas:
+- 3.8 *netlib
+liblapack:
+- 3.8.0 *netlib
+liblapacke:
+- 3.8.0 *netlib
 libpng:
 - 1.6.35
 libxml2:
 - '2.9'
 ncurses:
 - '6.1'
-openblas:
-- 0.3.6
 openssl:
 - 1.1.1a
 perl:
@@ -63,8 +69,6 @@ pin_run_as_build:
     max_pin: x.x
   ncurses:
     max_pin: x.x
-  openblas:
-    max_pin: x.x.x
   openssl:
     max_pin: x.x.x
   perl:
