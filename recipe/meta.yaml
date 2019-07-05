@@ -105,6 +105,8 @@ requirements:
 test:
   commands:
     - octave --version
+    - touch test_file.txt
+    - octave test_file.txt
 
 about:
   home: https://www.gnu.org/software/octave/
