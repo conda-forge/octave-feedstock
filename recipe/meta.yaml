@@ -16,8 +16,9 @@ source:
     - patch-qscintilla2.diff
 
 build:
-  number: 10
+  number: 11
   skip: True  # [win]
+  detect_binary_files_with_prefix: False
 
 requirements:
   build:
@@ -102,8 +103,12 @@ requirements:
     - openssl
 
 test:
+  requires:
+    - coreutils
   commands:
     - octave --version
+    - touch test_file.txt
+    - octave test_file.txt
 
 about:
   home: https://www.gnu.org/software/octave/
