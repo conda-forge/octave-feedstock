@@ -103,6 +103,8 @@ requirements:
     - openssl
 
 test:
+  requires:
+    - coreutils
   commands:
     - octave --version
     - touch test_file.txt
