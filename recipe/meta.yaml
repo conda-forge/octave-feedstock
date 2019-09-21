@@ -1,4 +1,4 @@
-{% set version = "4.2.1" %}
+{% set version = "4.2.2" %}
 
 package:
   name: octave
@@ -16,7 +16,7 @@ source:
     - patch-qscintilla2.diff
 
 build:
-  number: 13
+  number: 0
   skip: True  # [win]
   detect_binary_files_with_prefix: False
 
