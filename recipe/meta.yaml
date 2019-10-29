@@ -16,7 +16,7 @@ source:
     - patch-qscintilla2.diff
 
 build:
-  number: 13
+  number: 14
   skip: True  # [win]
   detect_binary_files_with_prefix: False
 
