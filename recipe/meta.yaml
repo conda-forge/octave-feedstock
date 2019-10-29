@@ -41,6 +41,7 @@ requirements:
     - {{ cdt('libxft') }}  # [linux]
     - {{ cdt('libx11-devel') }}  # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - llvm-openmp  # [osx]
   host:
     - libblas
     - libcblas
@@ -49,7 +50,7 @@ requirements:
     - pcre
     - readline
     - arpack
-    - curl
+    - libcurl
     - fftw
     - fontconfig
     - freetype
@@ -77,7 +78,7 @@ requirements:
     - pcre
     - readline
     - arpack
-    - curl
+    - libcurl
     - {{ pin_compatible("fftw", max_pin="x.x") }}
     - fontconfig
     - freetype
