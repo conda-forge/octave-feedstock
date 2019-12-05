@@ -13,7 +13,9 @@ curl:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '4'
+- '9'
+fftw:
+- '3'
 fontconfig:
 - '2.13'
 fortran_compiler:
@@ -59,6 +61,8 @@ pin_run_as_build:
     max_pin: x
   curl:
     max_pin: x
+  fftw:
+    max_pin: x
   fontconfig:
     max_pin: x
   freetype:
@@ -89,6 +93,8 @@ qt:
 - '5.12'
 readline:
 - '8.0'
+suitesparse:
+- '5.6'
 xz:
 - '5.2'
 zlib:
