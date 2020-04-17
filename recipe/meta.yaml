@@ -112,7 +112,7 @@ test:
 
 about:
   home: https://www.gnu.org/software/octave/
-  license: GPLv3
+  license: GPL-3.0-or-later
   license_file: COPYING
   doc_url: https://www.gnu.org/software/octave/doc/interpreter/
   summary: 'GNU Octave is a high-level language, primarily intended for numerical computations'
