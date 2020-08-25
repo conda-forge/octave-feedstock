@@ -1,5 +1,5 @@
 arpack:
-- 3.6.3
+- '3.7'
 bzip2:
 - '1'
 channel_sources:
@@ -7,7 +7,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 curl:
-- '7.64'
+- '7'
 cxx_compiler:
 - gxx
 cxx_compiler_version:
@@ -29,7 +29,7 @@ glib:
 glpk:
 - '4.65'
 hdf5:
-- 1.10.5
+- 1.10.6
 icu:
 - '64.2'
 libblas:
@@ -47,7 +47,7 @@ libxml2:
 ncurses:
 - '6.1'
 openssl:
-- 1.1.1a
+- 1.1.1
 perl:
 - 5.26.2
 pin_run_as_build:
@@ -89,6 +89,8 @@ qt:
 - '5.12'
 readline:
 - '8.0'
+suitesparse:
+- '5.6'
 xz:
 - '5.2'
 zlib:
