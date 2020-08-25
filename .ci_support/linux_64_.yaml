@@ -6,8 +6,6 @@ channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
-curl:
-- '7'
 cxx_compiler:
 - gxx
 cxx_compiler_version:
@@ -36,6 +34,8 @@ libblas:
 - 3.8 *netlib
 libcblas:
 - 3.8 *netlib
+libcurl:
+- '7'
 liblapack:
 - 3.8.0 *netlib
 liblapacke:
@@ -45,7 +45,7 @@ libpng:
 libxml2:
 - '2.9'
 ncurses:
-- '6.1'
+- '6.2'
 openssl:
 - 1.1.1
 perl:
@@ -54,8 +54,6 @@ pin_run_as_build:
   arpack:
     max_pin: x.x.x
   bzip2:
-    max_pin: x
-  curl:
     max_pin: x
   fftw:
     max_pin: x
@@ -66,6 +64,8 @@ pin_run_as_build:
   glpk:
     max_pin: x.x
   icu:
+    max_pin: x
+  libcurl:
     max_pin: x
   libpng:
     max_pin: x.x
@@ -91,6 +91,8 @@ readline:
 - '8.0'
 suitesparse:
 - '5.6'
+target_platform:
+- linux-64
 xz:
 - '5.2'
 zlib:
