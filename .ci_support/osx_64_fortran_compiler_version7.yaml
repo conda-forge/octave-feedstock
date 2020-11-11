@@ -1,0 +1,102 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+arpack:
+- '3.7'
+bzip2:
+- '1'
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+curl:
+- '7'
+cxx_compiler:
+- clangxx
+cxx_compiler_version:
+- '10'
+fftw:
+- '3'
+fontconfig:
+- '2.13'
+fortran_compiler:
+- gfortran
+fortran_compiler_version:
+- '7'
+freetype:
+- '2'
+glib:
+- '2.58'
+glpk:
+- '4.65'
+hdf5:
+- 1.10.6
+icu:
+- '67'
+libblas:
+- 3.8 *netlib
+libcblas:
+- 3.8 *netlib
+liblapack:
+- 3.8 *netlib
+liblapacke:
+- 3.8 *netlib
+libpng:
+- '1.6'
+libxml2:
+- '2.9'
+macos_machine:
+- x86_64-apple-darwin13.4.0
+ncurses:
+- '6.2'
+openssl:
+- 1.1.1
+perl:
+- 5.26.2
+pin_run_as_build:
+  arpack:
+    max_pin: x.x.x
+  bzip2:
+    max_pin: x
+  curl:
+    max_pin: x
+  fftw:
+    max_pin: x
+  fontconfig:
+    max_pin: x
+  freetype:
+    max_pin: x
+  glpk:
+    max_pin: x.x
+  libpng:
+    max_pin: x.x
+  libxml2:
+    max_pin: x.x
+  ncurses:
+    max_pin: x.x
+  openssl:
+    max_pin: x.x.x
+  perl:
+    max_pin: x.x.x
+  qt:
+    max_pin: x.x
+  readline:
+    max_pin: x
+  xz:
+    max_pin: x.x
+  zlib:
+    max_pin: x.x
+qt:
+- '5.12'
+readline:
+- '8.0'
+suitesparse:
+- '5.6'
+target_platform:
+- osx-64
+xz:
+- '5.2'
+zip_keys:
+- - cxx_compiler_version
+  - fortran_compiler_version
+zlib:
+- '1.2'
