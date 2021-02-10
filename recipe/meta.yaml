@@ -23,8 +23,9 @@ requirements:
     - perl
     - ghostscript
     - pkg-config  # [linux]
+    - libgomp     # [linux]
+    - llvm-openmp  # [osx]
     - bison
-    - sundials
     - gperf
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
@@ -52,12 +53,13 @@ requirements:
     - readline
     - arpack
     - curl
+    - libcurl
     - fftw
     - fontconfig
     - freetype
     - glpk
     - gnuplot
-    - hdf5 >=1.10
+    - hdf5
     - suitesparse
     - zlib
     - bzip2
@@ -82,13 +84,8 @@ requirements:
     - ghostscript
     - texinfo
     - gl2ps
-    - libblas * *mkl
-    - mkl
     - libglu  # [linux]
     - fltk
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - {{ compiler('fortran') }}
     - pcre
     - readline
     - arpack
@@ -99,7 +96,7 @@ requirements:
     - freetype
     - glpk
     - gnuplot
-    - hdf5 >=1.10
+    - hdf5
     - {{ pin_compatible("suitesparse", max_pin="x.x") }}
     - zlib
     - bzip2
