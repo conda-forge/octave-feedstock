@@ -81,7 +81,7 @@ requirements:
     - gl2ps
     - fltk
     - libiconv
-    - alsa-lib
+    - alsa-lib  # [linux]
   run:
     - ghostscript
     - texinfo
