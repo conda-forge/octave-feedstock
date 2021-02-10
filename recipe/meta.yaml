@@ -57,7 +57,7 @@ requirements:
     - freetype
     - glpk
     - gnuplot
-    - "hdf5>=1.10"
+    - hdf5 >=1.10
     - suitesparse
     - zlib
     - bzip2
@@ -99,7 +99,7 @@ requirements:
     - freetype
     - glpk
     - gnuplot
-    - "hdf5>=1.10"
+    - hdf5 >=1.10
     - {{ pin_compatible("suitesparse", max_pin="x.x") }}
     - zlib
     - bzip2
