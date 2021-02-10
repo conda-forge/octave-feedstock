@@ -80,6 +80,8 @@ requirements:
     - texinfo
     - gl2ps
     - fltk
+    - libiconv
+    - alsa-lib
   run:
     - ghostscript
     - texinfo
