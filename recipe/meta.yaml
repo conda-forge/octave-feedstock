@@ -45,7 +45,7 @@ requirements:
     - libcblas
     - liblapack
     - liblapacke
-    - libglu
+    - libglu  # [linux]
     - pcre
     - ghostscript
     - sundials
@@ -84,7 +84,7 @@ requirements:
     - gl2ps
     - libblas * *mkl
     - mkl
-    - libglu
+    - libglu  # [linux]
     - fltk
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
