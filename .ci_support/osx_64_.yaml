@@ -32,12 +32,18 @@ glib:
 - '2'
 glpk:
 - '4.65'
+hdf5:
+- 1.10.6
 icu:
 - '68'
 libblas:
 - 3.8 *netlib
 libcblas:
 - 3.8 *netlib
+libcurl:
+- '7'
+libiconv:
+- '1.16'
 liblapack:
 - 3.8 *netlib
 liblapacke:
@@ -68,6 +74,10 @@ pin_run_as_build:
   freetype:
     max_pin: x
   glpk:
+    max_pin: x.x
+  libcurl:
+    max_pin: x
+  libiconv:
     max_pin: x.x
   libpng:
     max_pin: x.x
