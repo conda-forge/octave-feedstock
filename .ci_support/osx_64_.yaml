@@ -58,6 +58,8 @@ ncurses:
 - '6.2'
 openssl:
 - 1.1.1
+pcre:
+- '8'
 perl:
 - 5.26.2
 pin_run_as_build:
