@@ -106,7 +106,7 @@ qt:
 readline:
 - '8.0'
 suitesparse:
-- '5.6'
+- '5'
 target_platform:
 - linux-64
 xz:
