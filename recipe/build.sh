@@ -7,7 +7,6 @@ chmod +x build-aux/mk-opts.pl
 
 ./configure --help
 ./configure --prefix=$PREFIX \
-    --disable-docs \
     --enable-readline \
     --enable-shared \
     --with-lapack="-lopenblas" \
