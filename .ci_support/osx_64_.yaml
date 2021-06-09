@@ -102,9 +102,9 @@ pin_run_as_build:
 qt:
 - '5.12'
 readline:
-- '8.0'
+- '8'
 suitesparse:
-- '5.6'
+- '5'
 target_platform:
 - osx-64
 xz:
