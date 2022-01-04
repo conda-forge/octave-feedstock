@@ -145,5 +145,7 @@ Feedstock Maintainers
 =====================
 
 * [@isuruf](https://github.com/isuruf/)
+* [@izahn](https://github.com/izahn/)
+* [@ngam](https://github.com/ngam/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 
