@@ -24,7 +24,6 @@ requirements:
     - {{ compiler('fortran') }}
     - make  # [linux]
     - automake
-    - libtool
     - sed
     - perl
     - ghostscript
