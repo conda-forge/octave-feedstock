@@ -23,6 +23,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
     - make  # [linux]
+    - automake
     - sed
     - perl
     - ghostscript
