@@ -1,4 +1,4 @@
-{% set version = "6.3.0" %}
+{% set version = "6.4.0" %}
 
 package:
   name: octave
@@ -6,10 +6,13 @@ package:
 
 source:
   url: https://ftp.gnu.org/gnu/octave/octave-{{ version }}.tar.gz
-  sha256: 232065f3a72fc3013fe9f17f429a3df69d672c1f6b6077029a31c8f3cd58a66e
+  sha256: b48f33d4fceaf394cfbea73a8c850000936d83a41739a24f7568b5b0a7b39acd
+  patches:
+    # https://github.com/archlinux/svntogit-community/blob/packages/octave/trunk/octave-sundials-6.0.patch
+    - octave-sundials-6.0.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   binary_has_prefix_files:   # [unix]
     - bin/octave-{{ version }}  # [linux]
@@ -19,6 +22,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
+    - make  # [linux]
+    - automake
     - sed
     - perl
     - ghostscript
@@ -136,3 +141,5 @@ extra:
   recipe-maintainers:
     - isuruf
     - ocefpaf
+    - izahn
+    - ngam

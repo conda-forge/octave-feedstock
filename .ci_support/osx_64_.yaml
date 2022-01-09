@@ -9,7 +9,7 @@ c_compiler:
 c_compiler_version:
 - '11'
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 curl:
@@ -63,7 +63,7 @@ openssl:
 pcre:
 - '8'
 perl:
-- 5.26.2
+- 5.32.1
 pin_run_as_build:
   arpack:
     max_pin: x.x.x
@@ -89,10 +89,6 @@ pin_run_as_build:
     max_pin: x.x
   ncurses:
     max_pin: x.x
-  openssl:
-    max_pin: x.x.x
-  perl:
-    max_pin: x.x.x
   qt:
     max_pin: x.x
   readline:
