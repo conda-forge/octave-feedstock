@@ -125,6 +125,8 @@ requirements:
 test:
   requires:
     - coreutils
+    - make
+    - cxx-compiler
   commands:
     - octave --version
     - touch test_file.txt
