@@ -129,6 +129,7 @@ test:
     - octave --version
     - touch test_file.txt
     - octave test_file.txt
+    - octave --eval "pkg install -forge -verbose io"
 
 about:
   home: https://www.gnu.org/software/octave/
