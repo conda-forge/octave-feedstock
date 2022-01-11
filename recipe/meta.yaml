@@ -128,7 +128,7 @@ test:
     - make
     - cmake
     - compilers
-    - libgomp     # [linux]
+    - openmp     # [linux]
     - llvm-openmp  # [osx]
   commands:
     - octave --version
