@@ -10,7 +10,9 @@ source:
   patches:
     # https://github.com/archlinux/svntogit-community/blob/packages/octave/trunk/octave-sundials-6.0.patch
     - octave-sundials-6.0.patch
-
+    # fixing linking issues following:
+    # https://github.com/Homebrew/homebrew-core/blob/b2571905f109a787c6e155ddf3f853a6f6279e16/Formula/octave.rb#L75-L80
+    - 0001-fix-linking-issues-following-brew.patch
 build:
   number: 1
   skip: true  # [win]

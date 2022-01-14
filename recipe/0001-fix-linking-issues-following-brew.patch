@@ -1,0 +1,33 @@
+From b0e2a097013ad5e5fce8ab591f8c63e052a0ac48 Mon Sep 17 00:00:00 2001
+From: ngam <67342040+ngam@users.noreply.github.com>
+Date: Thu, 13 Jan 2022 22:00:52 -0500
+Subject: [PATCH] fix linking issues following brew
+
+---
+ src/mkoctfile.in.cc | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/mkoctfile.in.cc b/src/mkoctfile.in.cc
+index 14e0361..1d93b63 100644
+--- a/src/mkoctfile.in.cc
++++ b/src/mkoctfile.in.cc
+@@ -332,14 +332,14 @@ initialize (void)
+                                            %OCTAVE_CONF_MKOCTFILE_OCTAVE_LINK_DEPS%);
+ 
+   vars["OCTAVE_LINK_OPTS"] = get_variable ("OCTAVE_LINK_OPTS",
+-                                           %OCTAVE_CONF_OCTAVE_LINK_OPTS%);
++                                           "");
+ 
+   vars["OCT_LINK_DEPS"] = get_variable ("OCT_LINK_DEPS",
+                                         %OCTAVE_CONF_MKOCTFILE_OCT_LINK_DEPS%);
+ 
+   vars["OCT_LINK_OPTS"]
+     = get_variable ("OCT_LINK_OPTS",
+-                    replace_prefix (%OCTAVE_CONF_OCT_LINK_OPTS%));
++                    replace_prefix (""));
+ 
+   vars["LDFLAGS"] = get_variable ("LDFLAGS",
+                                   replace_prefix (%OCTAVE_CONF_LDFLAGS%));
+-- 
+2.34.1
+
