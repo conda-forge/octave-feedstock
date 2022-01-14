@@ -1,7 +1,3 @@
-MACOSX_DEPLOYMENT_TARGET:  # [osx]
-  - "10"                   # [osx]
-MACOSX_SDK_VERSION:        # [osx]
-  - "10"                   # [osx]
 c_compiler_version:        # [osx]
  - '12'                    # [osx]
 cxx_compiler_version:      # [osx]
