@@ -1,7 +1,5 @@
 MACOSX_DEPLOYMENT_TARGET:
-- '10'
-MACOSX_SDK_VERSION:
-- '10'
+- '10.9'
 arpack:
 - '3.7'
 bzip2:
