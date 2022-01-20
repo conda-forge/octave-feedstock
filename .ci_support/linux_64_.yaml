@@ -39,7 +39,7 @@ glpk:
 hdf5:
 - 1.12.1
 icu:
-- '68'
+- '69'
 libblas:
 - 3.8 *netlib
 libcblas:
@@ -57,7 +57,7 @@ libpng:
 libxml2:
 - '2.9'
 ncurses:
-- '6.2'
+- '6'
 openssl:
 - 1.1.1
 pcre:
@@ -86,8 +86,6 @@ pin_run_as_build:
   libpng:
     max_pin: x.x
   libxml2:
-    max_pin: x.x
-  ncurses:
     max_pin: x.x
   qt:
     max_pin: x.x
