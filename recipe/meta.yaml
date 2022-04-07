@@ -7,9 +7,6 @@ package:
 source:
   url: https://ftp.gnu.org/gnu/octave/octave-{{ version }}.tar.gz
   sha256: d4a9d81f3f67b4a6e07cb7a80dcb10ad5e9176fcc30762c70a81580a64b8b0b6
-  patches:
-    # https://github.com/archlinux/svntogit-community/blob/packages/octave/trunk/octave-sundials-6.0.patch
-    # - octave-sundials-6.0.patch
 
 build:
   number: 0
