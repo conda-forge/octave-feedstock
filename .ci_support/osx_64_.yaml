@@ -7,7 +7,7 @@ bzip2:
 c_compiler:
 - clang
 c_compiler_version:
-- '12'
+- '13'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -17,7 +17,7 @@ curl:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '12'
+- '13'
 fftw:
 - '3'
 fontconfig:
@@ -35,25 +35,25 @@ glpk:
 hdf5:
 - 1.12.1
 icu:
-- '69'
+- '70'
 libblas:
-- 3.8 *netlib
+- 3.9 *netlib
 libcblas:
-- 3.8 *netlib
+- 3.9 *netlib
 libcurl:
 - '7'
 libiconv:
 - '1.16'
 liblapack:
-- 3.8 *netlib
+- 3.9 *netlib
 liblapacke:
-- 3.8 *netlib
+- 3.9 *netlib
 libpng:
 - '1.6'
 libxml2:
 - '2.9'
 llvm_openmp:
-- '12'
+- '13'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 ncurses:

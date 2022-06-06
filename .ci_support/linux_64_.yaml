@@ -39,19 +39,19 @@ glpk:
 hdf5:
 - 1.12.1
 icu:
-- '69'
+- '70'
 libblas:
-- 3.8 *netlib
+- 3.9 *netlib
 libcblas:
-- 3.8 *netlib
+- 3.9 *netlib
 libcurl:
 - '7'
 libiconv:
 - '1.16'
 liblapack:
-- 3.8 *netlib
+- 3.9 *netlib
 liblapacke:
-- 3.8 *netlib
+- 3.9 *netlib
 libpng:
 - '1.6'
 libxml2:
