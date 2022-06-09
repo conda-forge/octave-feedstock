@@ -1,5 +1,5 @@
 alsa_lib:
-- 1.2.3
+- 1.2.6
 arpack:
 - '3.7'
 bzip2:
@@ -41,17 +41,17 @@ hdf5:
 icu:
 - '69'
 libblas:
-- 3.8 *netlib
+- 3.9 *netlib
 libcblas:
-- 3.8 *netlib
+- 3.9 *netlib
 libcurl:
 - '7'
 libiconv:
 - '1.16'
 liblapack:
-- 3.8 *netlib
+- 3.9 *netlib
 liblapacke:
-- 3.8 *netlib
+- 3.9 *netlib
 libpng:
 - '1.6'
 libxml2:
