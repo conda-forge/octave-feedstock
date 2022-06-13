@@ -77,7 +77,7 @@ requirements:
     - libxml2
     - libpng
     - glib
-    - qt
+    - qt-main
     - openssl
     - texinfo
     - gl2ps
@@ -116,7 +116,7 @@ requirements:
     - libxml2
     - libpng
     - glib
-    - qt
+    - qt-main
     - openssl
 
 test:
