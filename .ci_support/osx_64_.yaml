@@ -87,16 +87,12 @@ pin_run_as_build:
     max_pin: x.x
   libxml2:
     max_pin: x.x
-  qt:
-    max_pin: x.x
   readline:
     max_pin: x
   xz:
     max_pin: x.x
   zlib:
     max_pin: x.x
-qt:
-- '5.12'
 readline:
 - '8'
 suitesparse:
