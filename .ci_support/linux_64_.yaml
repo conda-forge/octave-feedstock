@@ -93,6 +93,8 @@ pin_run_as_build:
     max_pin: x.x
   zlib:
     max_pin: x.x
+qt_main:
+- '5.15'
 readline:
 - '8'
 suitesparse:
