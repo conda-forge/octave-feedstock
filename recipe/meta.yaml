@@ -9,7 +9,7 @@ source:
   sha256: b12cb652587d31c5c382b39ed73463c22a5259ecb2fa6b323a27da409222dacc
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   binary_has_prefix_files:   # [unix]
     - bin/octave-{{ version }}  # [linux]
@@ -84,6 +84,7 @@ requirements:
     - fltk
     - libiconv
     - alsa-lib  # [linux]
+    - rapidjson
   run:
     - ghostscript
     - texinfo
