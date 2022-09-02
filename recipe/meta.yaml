@@ -14,7 +14,7 @@ build:
   binary_has_prefix_files:   # [linux]
     - bin/octave-{{ version }}  # [linux]
   run_exports:
-    - {{ pin_subpackage('octave', max_pin='x.x') }}
+    - {{ pin_subpackage('octave', max_pin='x') }}
 
 requirements:
   build:
