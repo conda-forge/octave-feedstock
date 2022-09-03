@@ -139,6 +139,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - SylvainCorlay
     - isuruf
     - ocefpaf
     - izahn
