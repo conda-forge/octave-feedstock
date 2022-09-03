@@ -35,7 +35,7 @@ freetype:
 glib:
 - '2'
 glpk:
-- '4.65'
+- '5.0'
 hdf5:
 - 1.12.2
 icu:
