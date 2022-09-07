@@ -10,7 +10,7 @@ chmod +x build-aux/mk-opts.pl
     --enable-readline \
     --enable-shared \
     --with-lapack="-lopenblas" \
-    --without-fltk \
+    --with-fltk \
     --enable-dl \
     --without-qrupdate \
     --with-qt=5 \
