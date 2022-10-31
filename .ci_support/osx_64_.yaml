@@ -53,7 +53,7 @@ libpng:
 libsndfile:
 - '1.1'
 libxml2:
-- '2.9'
+- '2.10'
 llvm_openmp:
 - '14'
 macos_machine:

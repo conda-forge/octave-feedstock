@@ -1,5 +1,5 @@
 alsa_lib:
-- 1.2.7
+- 1.2.8
 arpack:
 - '3.7'
 bzip2:
@@ -57,7 +57,7 @@ libpng:
 libsndfile:
 - '1.1'
 libxml2:
-- '2.9'
+- '2.10'
 ncurses:
 - '6'
 openssl:
