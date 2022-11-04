@@ -50,8 +50,6 @@ liblapacke:
 - 3.9 *netlib
 libpng:
 - '1.6'
-libsndfile:
-- '1.1'
 libxml2:
 - '2.10'
 llvm_openmp:
