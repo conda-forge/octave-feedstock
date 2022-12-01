@@ -1,15 +1,13 @@
-alsa_lib:
-- 1.2.8
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
 arpack:
 - '3.7'
 bzip2:
 - '1'
 c_compiler:
-- gcc
+- clang
 c_compiler_version:
-- '10'
-cdt_name:
-- cos6
+- '14'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -17,11 +15,9 @@ channel_targets:
 curl:
 - '7'
 cxx_compiler:
-- gxx
+- clangxx
 cxx_compiler_version:
-- '10'
-docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- '14'
 fftw:
 - '3'
 fontconfig:
@@ -29,7 +25,7 @@ fontconfig:
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '10'
+- '11'
 freetype:
 - '2'
 glib:
@@ -54,8 +50,14 @@ liblapacke:
 - 3.9 *netlib
 libpng:
 - '1.6'
+libsndfile:
+- '1.1'
 libxml2:
 - '2.10'
+llvm_openmp:
+- '14'
+macos_machine:
+- x86_64-apple-darwin13.4.0
 ncurses:
 - '6'
 openssl:
@@ -71,7 +73,7 @@ readline:
 suitesparse:
 - '5'
 target_platform:
-- linux-64
+- osx-64
 xz:
 - '5'
 zip_keys:

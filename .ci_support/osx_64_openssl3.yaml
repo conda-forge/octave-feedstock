@@ -50,6 +50,8 @@ liblapacke:
 - 3.9 *netlib
 libpng:
 - '1.6'
+libsndfile:
+- '1.1'
 libxml2:
 - '2.10'
 llvm_openmp:
@@ -59,7 +61,7 @@ macos_machine:
 ncurses:
 - '6'
 openssl:
-- 1.1.1
+- '3'
 pcre:
 - '8'
 perl:
