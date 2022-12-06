@@ -1,9 +1,17 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+set -ex
 
 export CPPFLAGS="-I${PREFIX}/include ${CPPFLAGS}"
 
 chmod +x configure
 chmod +x build-aux/mk-opts.pl
+
+if [[ $target_platform == "linux-ppc64le" ]]; then
+    BUILD_WITH_QT="--without-qt"
+else
+    BUILD_WITH_QT="--with-qt=5"
+fi
 
 ./configure --help
 ./configure --prefix=$PREFIX \
@@ -13,7 +21,7 @@ chmod +x build-aux/mk-opts.pl
     --with-fltk \
     --enable-dl \
     --without-qrupdate \
-    --with-qt=5 \
+    $BUILD_WITH_QT \
     --with-magick=GraphicsMagick \
     --without-framework-carbon \
     --with-hdf5-includedir=${PREFIX}/include \
