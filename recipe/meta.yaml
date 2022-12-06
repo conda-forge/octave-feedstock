@@ -9,7 +9,7 @@ source:
   sha256: 6e14a4649d70af45ab660f8cbbf645aaf1ec33f25f88bfda4697cb17e440c4f5
 
 build:
-  number: 1
+  number: 3
   skip: true  # [win]
   binary_has_prefix_files:   # [linux]
     - bin/octave-{{ version }}  # [linux]
@@ -69,7 +69,7 @@ requirements:
     - bzip2
     - portaudio
     - libsndfile
-    - qscintilla2
+    - qscintilla2  # [not ppc64le]
     - qhull
     - graphicsmagick  # [linux]
     # Following gets linked at the end.
@@ -79,7 +79,7 @@ requirements:
     - libxml2
     - libpng
     - glib
-    - qt-main
+    - qt-main  # [not ppc64le]
     - openssl
     - texinfo
     - gl2ps
@@ -109,7 +109,7 @@ requirements:
     - bzip2
     - {{ pin_compatible("portaudio") }}
     - libsndfile
-    - {{ pin_compatible("qscintilla2", max_pin="x.x") }}
+    - {{ pin_compatible("qscintilla2", max_pin="x.x") }}  # [not ppc64le]
     - qhull
     - {{ pin_compatible("graphicsmagick") }}   # [linux]
     # Following gets linked at the end.
@@ -119,7 +119,7 @@ requirements:
     - libxml2
     - libpng
     - glib
-    - qt-main
+    - qt-main  # [not ppc64le]
     - openssl
 
 test:
