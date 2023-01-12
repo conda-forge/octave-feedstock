@@ -51,7 +51,7 @@ liblapacke:
 libpng:
 - '1.6'
 libsndfile:
-- '1.1'
+- '1.2'
 libxml2:
 - '2.10'
 llvm_openmp:
