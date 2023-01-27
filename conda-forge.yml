@@ -7,3 +7,5 @@ conda_build:
 provider:
   linux_aarch64: default
   linux_ppc64le: azure
+build_platform:
+  linux_ppc64le: linux_64

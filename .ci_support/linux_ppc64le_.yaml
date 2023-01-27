@@ -21,7 +21,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '11'
 docker_image:
-- quay.io/condaforge/linux-anvil-ppc64le
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 fftw:
 - '3'
 fontconfig:
@@ -82,3 +82,39 @@ zip_keys:
   - fortran_compiler_version
 zlib:
 - '1.2'
+build_platform:
+- linux-64
+CMAKE_CROSSCOMPILING_EMULATOR: 
+- /usr/bin/qemu-ppc64le-static
+CROSSCOMPILING_EMULATOR: 
+- /usr/bin/qemu-ppc64le-static
+build_platform:
+- linux-64
+CMAKE_CROSSCOMPILING_EMULATOR: 
+- /usr/bin/qemu-ppc64le-static
+CROSSCOMPILING_EMULATOR: 
+- /usr/bin/qemu-ppc64le-static
+build_platform:
+- linux-64
+CMAKE_CROSSCOMPILING_EMULATOR: 
+- /usr/bin/qemu-ppc64le-static
+CROSSCOMPILING_EMULATOR: 
+- /usr/bin/qemu-ppc64le-static
+build_platform:
+- linux-64
+CMAKE_CROSSCOMPILING_EMULATOR: 
+- /usr/bin/qemu-ppc64le-static
+CROSSCOMPILING_EMULATOR: 
+- /usr/bin/qemu-ppc64le-static
+build_platform:
+- linux-64
+CMAKE_CROSSCOMPILING_EMULATOR: 
+- /usr/bin/qemu-ppc64le-static
+CROSSCOMPILING_EMULATOR: 
+- /usr/bin/qemu-ppc64le-static
+build_platform:
+- linux-64
+CMAKE_CROSSCOMPILING_EMULATOR: 
+- /usr/bin/qemu-ppc64le-static
+CROSSCOMPILING_EMULATOR: 
+- /usr/bin/qemu-ppc64le-static

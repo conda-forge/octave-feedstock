@@ -1,9 +1,16 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+set -ex
 
 export CPPFLAGS="-I${PREFIX}/include ${CPPFLAGS}"
 
 chmod +x configure
 chmod +x build-aux/mk-opts.pl
+
+if [[ $target_platform == "linux-ppc64le" ]]; then
+    # Needs to be set for cross-compilation
+    export ax_blas_integer_size=4
+fi
 
 ./configure --help
 ./configure --prefix=$PREFIX \
