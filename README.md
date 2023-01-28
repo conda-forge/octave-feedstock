@@ -195,6 +195,7 @@ Feedstock Maintainers
 * [@SylvainCorlay](https://github.com/SylvainCorlay/)
 * [@isuruf](https://github.com/isuruf/)
 * [@izahn](https://github.com/izahn/)
+* [@matthiasdiener](https://github.com/matthiasdiener/)
 * [@ngam](https://github.com/ngam/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 
