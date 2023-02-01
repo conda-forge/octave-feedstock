@@ -1,6 +1,4 @@
 #!/bin/bash
-# Get an updated config.sub and config.guess
-cp $BUILD_PREFIX/share/gnuconfig/config.* ./build-aux
 
 set -ex
 
@@ -9,7 +7,7 @@ export CPPFLAGS="-I${PREFIX}/include ${CPPFLAGS}"
 chmod +x configure
 chmod +x build-aux/mk-opts.pl
 
-if [[ $target_platform == "linux-ppc64le" ]]; then
+if [[ $target_platform == "linux-ppc64le" || $target_platform == "osx-arm64" ]]; then
     # Needs to be set for cross-compilation
     export ax_blas_integer_size=4
 fi
