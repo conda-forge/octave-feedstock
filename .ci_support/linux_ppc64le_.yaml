@@ -62,8 +62,8 @@ ncurses:
 - '6'
 openssl:
 - '3'
-pcre:
-- '8'
+pcre2:
+- '10.40'
 perl:
 - 5.32.1
 qt_main:
