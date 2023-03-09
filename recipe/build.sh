@@ -24,7 +24,9 @@ fi
     --with-magick=GraphicsMagick \
     --without-framework-carbon \
     --with-hdf5-includedir=${PREFIX}/include \
-    --with-hdf5-libdir=${PREFIX}/lib
+    --with-hdf5-libdir=${PREFIX}/lib \
+    --with-pcre2-includedir=${PREFIX}/include \
+    --with-pcre2-libdir=${PREFIX}/lib
 
 make -j${CPU_COUNT}
 make install
