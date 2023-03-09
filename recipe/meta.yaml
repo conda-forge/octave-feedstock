@@ -51,7 +51,7 @@ requirements:
     - liblapack
     - liblapacke
     - libglu  # [linux]
-    - pcre2
+    - pcre
     - ghostscript
     - sundials
     - readline
@@ -93,7 +93,7 @@ requirements:
     - gl2ps
     - libglu  # [linux]
     - fltk
-    - pcre2
+    - pcre
     - readline
     - arpack
     - curl
