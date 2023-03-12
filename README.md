@@ -1,11 +1,11 @@
-About octave
-============
+About octave-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/octave-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.gnu.org/software/octave/
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/octave-feedstock/blob/main/LICENSE.txt)
 
 Summary: GNU Octave is a high-level language, primarily intended for numerical computations
 

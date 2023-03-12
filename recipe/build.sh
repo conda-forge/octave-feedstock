@@ -15,6 +15,7 @@ fi
 ./configure --help
 ./configure --prefix=$PREFIX \
     --enable-readline \
+    --without-pcre2 \
     --enable-shared \
     --with-lapack="-lopenblas" \
     --with-fltk \
