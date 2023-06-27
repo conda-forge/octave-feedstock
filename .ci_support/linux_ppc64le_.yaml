@@ -7,7 +7,7 @@ bzip2:
 c_compiler:
 - gcc
 c_compiler_version:
-- '11'
+- '12'
 cdt_name:
 - cos7
 channel_sources:
@@ -19,7 +19,7 @@ curl:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '11'
+- '12'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 fftw:
@@ -29,7 +29,7 @@ fontconfig:
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '11'
+- '12'
 freetype:
 - '2'
 glib:
@@ -37,7 +37,7 @@ glib:
 glpk:
 - '5.0'
 hdf5:
-- 1.14.0
+- 1.14.1
 icu:
 - '70'
 libblas:
