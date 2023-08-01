@@ -9,7 +9,7 @@ source:
   sha256: 57d17f918a940d38ca3348211e110b34d735a322a87db71c177c4692a49a9c84
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   binary_has_prefix_files:   # [linux]
     - bin/octave-{{ version }}  # [linux]
