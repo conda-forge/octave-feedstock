@@ -39,7 +39,7 @@ glpk:
 hdf5:
 - 1.14.1
 icu:
-- '70'
+- '72'
 libblas:
 - 3.9 *netlib
 libcblas:
@@ -57,7 +57,7 @@ libpng:
 libsndfile:
 - '1.2'
 libxml2:
-- '2.10'
+- '2.11'
 ncurses:
 - '6'
 openssl:
