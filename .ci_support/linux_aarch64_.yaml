@@ -1,7 +1,7 @@
 BUILD:
 - aarch64-conda_cos7-linux-gnu
 alsa_lib:
-- 1.2.8
+- 1.2.9
 arpack:
 - '3.7'
 bzip2:
@@ -41,9 +41,9 @@ glib:
 glpk:
 - '5.0'
 hdf5:
-- 1.14.1
+- 1.14.2
 icu:
-- '70'
+- '72'
 libblas:
 - 3.9 *netlib
 libcblas:
@@ -61,7 +61,7 @@ libpng:
 libsndfile:
 - '1.2'
 libxml2:
-- '2.10'
+- '2.11'
 ncurses:
 - '6'
 openssl:
