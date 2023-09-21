@@ -9,7 +9,7 @@ source:
   sha256: 2b48111cb67b312817e5d1f3e171f5bad1512bb067e1674b9c4b29281895b97a
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   binary_has_prefix_files:   # [linux]
     - bin/octave-{{ version }}  # [linux]
@@ -34,17 +34,6 @@ requirements:
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxfixes') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxcb') }}  # [linux]
-    - {{ cdt('expat') }}  # [linux]
-    - {{ cdt('libxext') }}  # [linux]
-    - {{ cdt('libxrender') }}  # [linux]
-    - {{ cdt('libxt') }}  # [linux]
-    - {{ cdt('libxft') }}  # [linux]
-    - {{ cdt('libx11-devel') }}  # [linux]
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
   host:
     - libblas
     - libcblas
@@ -87,6 +76,10 @@ requirements:
     - libiconv
     - alsa-lib  # [linux]
     - rapidjson
+    - xorg-libxrender  # [linux]
+    - xorg-libxfixes   # [linux]
+    - xorg-libx11      # [linux]
+    - xorg-libxext     # [linux]
   run:
     - ghostscript
     - texinfo
