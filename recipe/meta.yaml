@@ -1,4 +1,4 @@
-{% set version = "8.3.0" %}
+{% set version = "8.4.0" %}
 
 package:
   name: octave
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://ftp.gnu.org/gnu/octave/octave-{{ version }}.tar.gz
-  sha256: 2b48111cb67b312817e5d1f3e171f5bad1512bb067e1674b9c4b29281895b97a
+  sha256: 6b38dd9751678424aeb3a9d666432b1f378eb3971a21290a90cd3d35119d56ad
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   binary_has_prefix_files:   # [linux]
     - bin/octave-{{ version }}  # [linux]
