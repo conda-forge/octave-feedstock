@@ -12,6 +12,11 @@ if [[ $target_platform == "linux-ppc64le" || $target_platform == "osx-arm64" || 
     export ax_blas_integer_size=4
 fi
 
+if [[ $target_platform == osx-* ]]; then
+    # Avoid errors regarding 'Window' typedef redefinition between X11 and FLTK
+    export CXXFLAGS=" ${CXXFLAGS} -Wno-typedef-redefinition "
+fi
+
 ./configure --help
 ./configure --prefix=$PREFIX \
     --enable-readline \
