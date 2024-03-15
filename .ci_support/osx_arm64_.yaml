@@ -33,7 +33,7 @@ glib:
 glpk:
 - '5.0'
 hdf5:
-- 1.14.2
+- 1.14.3
 icu:
 - '73'
 libblas:
@@ -53,7 +53,7 @@ libpng:
 libsndfile:
 - '1.2'
 libxml2:
-- '2.11'
+- '2'
 llvm_openmp:
 - '16'
 macos_machine:
