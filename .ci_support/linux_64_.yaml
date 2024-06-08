@@ -1,7 +1,7 @@
 alsa_lib:
 - '1.2'
 arpack:
-- '3.8'
+- '3.9'
 bzip2:
 - '1'
 c_compiler:
@@ -75,7 +75,7 @@ qt_main:
 readline:
 - '8'
 suitesparse:
-- '5'
+- '7'
 target_platform:
 - linux-64
 xz:
@@ -87,4 +87,4 @@ zip_keys:
 - - c_stdlib_version
   - cdt_name
 zlib:
-- '1.2'
+- '1'
