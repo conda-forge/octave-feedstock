@@ -22,7 +22,7 @@ fi
     --enable-dl \
     --without-qrupdate \
     --with-qt=5 \
-    --with-magick=GraphicsMagick \
+    --with-magick=GraphicsMagick++ \
     --without-framework-carbon \
     --with-hdf5-includedir=${PREFIX}/include \
     --with-hdf5-libdir=${PREFIX}/lib
