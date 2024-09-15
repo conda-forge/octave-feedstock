@@ -124,6 +124,7 @@ test:
     - octave --version
     - touch test_file.txt
     - octave test_file.txt
+    - octave --eval "imwrite(uint8(rand(20,20,3).*255),'test.jpg')"
 
 about:
   home: https://www.gnu.org/software/octave/
