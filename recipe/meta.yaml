@@ -43,6 +43,7 @@ requirements:
     - libglu  # [linux]
     - pcre
     - ghostscript
+    - pkg-config
     - sundials
     - readline
     - arpack
