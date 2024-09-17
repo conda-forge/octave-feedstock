@@ -9,7 +9,7 @@ source:
   sha256: 0636554b05996997e431caad4422c00386d2d7c68900472700fecf5ffeb7c991
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   binary_has_prefix_files:   # [linux]
     - bin/octave-{{ version }}  # [linux]
@@ -43,6 +43,7 @@ requirements:
     - libglu  # [linux]
     - pcre
     - ghostscript
+    - pkg-config
     - sundials
     - readline
     - arpack
@@ -61,7 +62,7 @@ requirements:
     - libsndfile
     - qscintilla2
     - qhull
-    - graphicsmagick  # [linux]
+    - graphicsmagick
     # Following gets linked at the end.
     - icu
     - ncurses
@@ -106,7 +107,7 @@ requirements:
     - libsndfile
     - {{ pin_compatible("qscintilla2", max_pin="x.x") }}
     - qhull
-    - {{ pin_compatible("graphicsmagick") }}   # [linux]
+    - {{ pin_compatible("graphicsmagick") }}
     # Following gets linked at the end.
     - icu
     - ncurses
@@ -124,6 +125,7 @@ test:
     - octave --version
     - touch test_file.txt
     - octave test_file.txt
+    - octave --eval "imwrite(uint8(rand(20,20,3).*255),'test.jpg')"
 
 about:
   home: https://www.gnu.org/software/octave/
