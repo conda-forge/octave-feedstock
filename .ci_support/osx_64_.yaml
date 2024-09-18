@@ -41,7 +41,7 @@ glpk:
 hdf5:
 - 1.14.3
 icu:
-- '73'
+- '75'
 libblas:
 - 3.9 *netlib
 libcblas:
