@@ -9,7 +9,7 @@ bzip2:
 c_compiler:
 - clang
 c_compiler_version:
-- '17'
+- '18'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -23,7 +23,7 @@ curl:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '17'
+- '18'
 fftw:
 - '3'
 fontconfig:
@@ -61,7 +61,7 @@ libsndfile:
 libxml2:
 - '2'
 llvm_openmp:
-- '17'
+- '18'
 macos_machine:
 - arm64-apple-darwin20.0.0
 ncurses:
@@ -72,10 +72,12 @@ pcre:
 - '8'
 perl:
 - 5.32.1
+portaudio:
+- '19.7'
 qhull:
 - '2020.2'
 qt_main:
-- '5.15'
+- 5.15.8
 readline:
 - '8'
 suitesparse:
