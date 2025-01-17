@@ -22,7 +22,6 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
-    - gnuconfig   # [unix]
     - make  # [linux]
     - automake
     - sed
