@@ -22,7 +22,7 @@ requirements:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
-    - make  # [linux]
+    - make
     - automake
     - sed
     - perl
