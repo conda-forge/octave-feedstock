@@ -25,7 +25,7 @@ fi
     --with-magick=GraphicsMagick++ \
     --without-framework-carbon \
     --with-hdf5-includedir=${PREFIX}/include \
-    --with-hdf5-libdir=${PREFIX}/lib
+    --with-hdf5-libdir=${PREFIX}/lib || { cat config.log; exit 1; }
 
 make -j${CPU_COUNT}
 make install
