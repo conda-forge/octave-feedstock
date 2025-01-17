@@ -7,4 +7,3 @@ libXxf86vm
 libxcb
 libXft
 expat
-xorg-x11-proto

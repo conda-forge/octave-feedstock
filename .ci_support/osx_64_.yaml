@@ -9,7 +9,7 @@ bzip2:
 c_compiler:
 - clang
 c_compiler_version:
-- '17'
+- '18'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -23,7 +23,7 @@ curl:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '17'
+- '18'
 fftw:
 - '3'
 fontconfig:
@@ -39,21 +39,21 @@ glib:
 glpk:
 - '5.0'
 hdf5:
-- 1.14.4
+- 1.14.3
 icu:
 - '75'
 libblas:
-- 3.9 *netlib
+- 3.9.* *netlib
 libcblas:
-- 3.9 *netlib
+- 3.9.* *netlib
 libcurl:
 - '8'
 libiconv:
 - '1'
 liblapack:
-- 3.9 *netlib
+- 3.9.* *netlib
 liblapacke:
-- 3.9 *netlib
+- 3.9.* *netlib
 libpng:
 - '1.6'
 libsndfile:
@@ -61,7 +61,7 @@ libsndfile:
 libxml2:
 - '2'
 llvm_openmp:
-- '17'
+- '18'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 ncurses:
