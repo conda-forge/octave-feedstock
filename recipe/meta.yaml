@@ -9,7 +9,7 @@ source:
   sha256: 809fa39a7acc84815bf4dc4d2d7e6b228ce75a07f3b2413f3313aa8e0aaa3287
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   binary_has_prefix_files:   # [linux]
     - bin/octave-{{ version }}  # [linux]
@@ -67,7 +67,7 @@ requirements:
     # Following gets linked at the end.
     - icu
     - ncurses
-    - xz
+    - liblzma-devel
     - libxml2
     - libpng
     - glib
@@ -112,7 +112,7 @@ requirements:
     # Following gets linked at the end.
     - icu
     - ncurses
-    - xz
+    - liblzma-devel
     - libxml2
     - libpng
     - glib
