@@ -64,6 +64,7 @@ requirements:
     - qscintilla2
     - qhull
     - graphicsmagick
+    - mkl  # [linux64]
     # Following gets linked at the end.
     - icu
     - ncurses
@@ -109,6 +110,7 @@ requirements:
     - {{ pin_compatible("qscintilla2", max_pin="x.x") }}
     - qhull
     - {{ pin_compatible("graphicsmagick") }}
+    - mkl  # [linux64]
     # Following gets linked at the end.
     - icu
     - ncurses
