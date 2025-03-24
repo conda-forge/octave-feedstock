@@ -1,4 +1,4 @@
-{% set version = "9.3.0" %}
+{% set version = "9.4.0" %}
 
 package:
   name: octave
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://ftp.gnu.org/gnu/octave/octave-{{ version }}.tar.gz
-  sha256: 809fa39a7acc84815bf4dc4d2d7e6b228ce75a07f3b2413f3313aa8e0aaa3287
+  sha256: da9481205bfa717660b7d4a16732d8b2d58aadceab4993d41242a8e2848ea6c1
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   binary_has_prefix_files:   # [linux]
     - bin/octave-{{ version }}  # [linux]
@@ -64,6 +64,7 @@ requirements:
     - qscintilla2
     - qhull
     - graphicsmagick
+    - mkl  # [linux64]
     # Following gets linked at the end.
     - icu
     - ncurses
@@ -109,6 +110,7 @@ requirements:
     - {{ pin_compatible("qscintilla2", max_pin="x.x") }}
     - qhull
     - {{ pin_compatible("graphicsmagick") }}
+    - mkl  # [linux64]
     # Following gets linked at the end.
     - icu
     - ncurses

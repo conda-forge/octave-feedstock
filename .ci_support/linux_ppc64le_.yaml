@@ -72,6 +72,8 @@ pcre:
 - '8'
 perl:
 - 5.32.1
+portaudio:
+- '19.7'
 qhull:
 - '2020.2'
 qt_main:
