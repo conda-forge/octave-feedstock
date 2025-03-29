@@ -64,6 +64,8 @@ libsndfile:
 - '1.2'
 libxml2:
 - '2'
+mkl:
+- '2024'
 ncurses:
 - '6'
 openssl:
