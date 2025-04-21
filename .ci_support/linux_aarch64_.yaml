@@ -41,7 +41,7 @@ glib:
 glpk:
 - '5.0'
 hdf5:
-- 1.14.3
+- 1.14.6
 icu:
 - '75'
 libblas:
@@ -63,7 +63,7 @@ libpng:
 libsndfile:
 - '1.2'
 libxml2:
-- '2'
+- '2.13'
 ncurses:
 - '6'
 openssl:
