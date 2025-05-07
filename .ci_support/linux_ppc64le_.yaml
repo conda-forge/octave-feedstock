@@ -63,7 +63,7 @@ libpng:
 libsndfile:
 - '1.2'
 libxml2:
-- '2'
+- '2.13'
 ncurses:
 - '6'
 openssl:
