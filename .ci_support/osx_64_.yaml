@@ -9,7 +9,7 @@ bzip2:
 c_compiler:
 - clang
 c_compiler_version:
-- '18'
+- '19'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -23,7 +23,7 @@ curl:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '18'
+- '19'
 fftw:
 - '3'
 fontconfig:
@@ -31,7 +31,7 @@ fontconfig:
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '13'
+- '14'
 freetype:
 - '2'
 glib:
@@ -63,7 +63,7 @@ libsndfile:
 libxml2:
 - '2.13'
 llvm_openmp:
-- '18'
+- '19'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 ncurses:
