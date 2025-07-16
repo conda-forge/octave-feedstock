@@ -41,6 +41,7 @@ requirements:
     - libcblas
     - liblapack
     - liblapacke
+    - libopenblas  # [osx]
     - libglu  # [linux]
     - pcre
     - ghostscript
