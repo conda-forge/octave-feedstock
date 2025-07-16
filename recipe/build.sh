@@ -12,12 +12,15 @@ if [[ $target_platform == "linux-ppc64le" || $target_platform == "osx-arm64" || 
     export ax_blas_integer_size=4
 fi
 
+export octave_cv_working_blas_single_precision=yes
+
 ./configure --help
 ./configure --prefix=$PREFIX \
     --enable-readline \
     --without-pcre2 \
     --enable-shared \
-    --with-lapack="-lopenblas" \
+    --with-blas="-lblas" \
+    --with-lapack="-llapack" \
     --with-fltk \
     --enable-dl \
     --without-qrupdate \
