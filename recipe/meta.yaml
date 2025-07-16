@@ -78,7 +78,7 @@ requirements:
     - texinfo
     - gl2ps
     - fltk
-    - libiconv <= 1.17  # [osx]
+    - libiconv <=1.17  # [osx]
     - alsa-lib  # [linux]
     - rapidjson
     - xorg-libxrender  # [linux]
