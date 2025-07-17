@@ -28,7 +28,6 @@ requirements:
     - perl
     - ghostscript
     - pkg-config  # [not win]
-    - libiconv !=1.18  # [osx]
     - libgomp     # [linux]
     - llvm-openmp  # [osx]
     - bison
@@ -78,7 +77,7 @@ requirements:
     - texinfo
     - gl2ps
     - fltk
-    - libiconv
+    - libiconv !=1.18
     - alsa-lib  # [linux]
     - rapidjson
     - xorg-libxrender  # [linux]
