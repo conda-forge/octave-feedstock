@@ -19,6 +19,13 @@ if [[ $target_platform == "osx-arm64" ]]; then
     $PKG_CONFIG --version
 fi
 
+if [[ $target_platform == "osx-64" ]]; then
+    echo "OOO osx-64 detected"
+    export PKG_CONFIG="${PREFIX}/bin/pkg-config"
+    export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${PREFIX}/share/pkgconfig"
+    $PKG_CONFIG --version
+fi
+
 export octave_cv_working_blas_single_precision=yes
 
 ./configure --help
