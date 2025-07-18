@@ -50,8 +50,6 @@ libcblas:
 - 3.9.* *netlib
 libcurl:
 - '8'
-libiconv:
-- '1'
 liblapack:
 - 3.9.* *netlib
 liblapacke:
