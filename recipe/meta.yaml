@@ -28,6 +28,7 @@ requirements:
     - perl
     - ghostscript
     - pkg-config  # [linux or osx-arm64]
+    - libiconv !=1.18  # [osx-arm64]
     - libgomp     # [linux]
     - llvm-openmp  # [osx]
     - bison
