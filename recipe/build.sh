@@ -16,7 +16,8 @@ if [[ $target_platform == "osx-arm64" ]]; then
     echo "OOO osx-arm64 detected"
     export PKG_CONFIG="${BUILD_PREFIX}/bin/pkg-config"
     export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${PREFIX}/share/pkgconfig"
-else if [[ $target_platform == "osx-64" ]]; then
+fi
+if [[ $target_platform == "osx-64" ]]; then
     echo "OOO osx-64 detected"
     export PKG_CONFIG="${PREFIX}/bin/pkg-config"
     export PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${PREFIX}/share/pkgconfig"
