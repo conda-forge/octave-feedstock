@@ -27,7 +27,7 @@ requirements:
     - sed
     - perl
     - ghostscript
-    - pkg-config  # [linux]
+    - pkg-config  # [linux or osx]
     - libgomp     # [linux]
     - llvm-openmp  # [osx]
     - bison
