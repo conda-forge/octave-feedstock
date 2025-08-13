@@ -5,7 +5,9 @@ package:
   version: {{ version }}
 
 source:
-  url: https://ftp.gnu.org/gnu/octave/octave-{{ version }}.tar.gz
+  url:
+    - https://ftp.gnu.org/gnu/octave/octave-{{ version }}.tar.gz
+    - https://ftpmirror.gnu.org/octave/octave-{{ version }}.tar.gz
   sha256: 07fb6d9339d2f350735c91671be8e874d160018cc6b688f9efd9d558d237f69f
 
 build:
