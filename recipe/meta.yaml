@@ -44,9 +44,7 @@ requirements:
     - libglu  # [linux]
     - pcre
     - ghostscript
-    # https://github.com/conda-forge/pkg-config-feedstock/issues/45
     - pkg-config
-    - libiconv !=1.18
     - sundials
     - readline
     - arpack
@@ -79,6 +77,7 @@ requirements:
     - texinfo
     - gl2ps
     - fltk
+    - libiconv <=1.17
     - alsa-lib  # [linux]
     - rapidjson
     - xorg-libxrender  # [linux]
