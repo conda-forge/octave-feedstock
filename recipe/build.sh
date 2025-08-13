@@ -13,10 +13,6 @@ if [[ $target_platform == "linux-ppc64le" || $target_platform == "osx-arm64" || 
 fi
 
 if [[ $target_platform == "osx-arm64" ]]; then
-    which pkg-config
-    pkg-config --version
-    printenv | grep PKG
-
     export PKG_CONFIG=${BUILD_PREFIX}/bin/pkg-config
 fi
 
