@@ -139,6 +139,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - IsabelParedes
     - SylvainCorlay
     - isuruf
     - ocefpaf
