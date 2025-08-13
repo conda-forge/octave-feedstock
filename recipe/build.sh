@@ -16,6 +16,8 @@ if [[ $target_platform == "osx-arm64" ]]; then
     which pkg-config
     pkg-config --version
     printenv | grep PKG
+
+    export PKG_CONFIG=${BUILD_PREFIX}/bin/pkg-config
 fi
 
 ./configure --help
