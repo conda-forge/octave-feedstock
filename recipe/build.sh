@@ -12,6 +12,12 @@ if [[ $target_platform == "linux-ppc64le" || $target_platform == "osx-arm64" || 
     export ax_blas_integer_size=4
 fi
 
+if [[ $target_platform == "osx-arm64" ]]; then
+    which pkg-config
+    pkg-config --version
+    printenv | grep PKG
+fi
+
 ./configure --help
 ./configure --prefix=$PREFIX \
     --enable-readline \
