@@ -12,12 +12,17 @@ if [[ $target_platform == "linux-ppc64le" || $target_platform == "osx-arm64" || 
     export ax_blas_integer_size=4
 fi
 
+if [[ $target_platform == "osx-arm64" ]]; then
+    export PKG_CONFIG=${BUILD_PREFIX}/bin/pkg-config
+fi
+
 ./configure --help
 ./configure --prefix=$PREFIX \
     --enable-readline \
     --without-pcre2 \
     --enable-shared \
-    --with-lapack="-lopenblas" \
+    --with-blas="-lblas" \
+    --with-lapack="-llapack" \
     --with-fltk \
     --enable-dl \
     --without-qrupdate \

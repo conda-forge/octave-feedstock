@@ -1,15 +1,17 @@
-{% set version = "9.4.0" %}
+{% set version = "10.2.0" %}
 
 package:
   name: octave
   version: {{ version }}
 
 source:
-  url: https://ftp.gnu.org/gnu/octave/octave-{{ version }}.tar.gz
-  sha256: da9481205bfa717660b7d4a16732d8b2d58aadceab4993d41242a8e2848ea6c1
+  url:
+    - https://ftp.gnu.org/gnu/octave/octave-{{ version }}.tar.gz
+    - https://ftpmirror.gnu.org/octave/octave-{{ version }}.tar.gz
+  sha256: 07fb6d9339d2f350735c91671be8e874d160018cc6b688f9efd9d558d237f69f
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   binary_has_prefix_files:   # [linux]
     - bin/octave-{{ version }}  # [linux]
@@ -27,7 +29,7 @@ requirements:
     - sed
     - perl
     - ghostscript
-    - pkg-config  # [linux]
+    - pkg-config  # [linux or (build_platform != target_platform)]
     - libgomp     # [linux]
     - llvm-openmp  # [osx]
     - bison
@@ -77,7 +79,7 @@ requirements:
     - texinfo
     - gl2ps
     - fltk
-    - libiconv
+    - libiconv <=1.17
     - alsa-lib  # [linux]
     - rapidjson
     - xorg-libxrender  # [linux]
@@ -129,6 +131,8 @@ test:
     - touch test_file.txt
     - octave test_file.txt
     - octave --eval "imwrite(uint8(rand(20,20,3).*255),'test.jpg')"
+    - octave --eval "help pkg"
+    - octave --eval "path"
 
 about:
   home: https://www.gnu.org/software/octave/
