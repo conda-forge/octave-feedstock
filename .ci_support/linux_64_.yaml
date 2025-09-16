@@ -60,8 +60,8 @@ libpng:
 - '1.6'
 libsndfile:
 - '1.2'
-libxml2:
-- '2.13'
+libxml2_devel:
+- '2.14'
 mkl:
 - '2024'
 ncurses:
