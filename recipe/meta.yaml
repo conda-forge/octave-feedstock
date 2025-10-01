@@ -1,4 +1,4 @@
-{% set version = "10.2.0" %}
+{% set version = "10.3.0" %}
 
 package:
   name: octave
@@ -8,7 +8,7 @@ source:
   url:
     - https://ftp.gnu.org/gnu/octave/octave-{{ version }}.tar.gz
     - https://ftpmirror.gnu.org/octave/octave-{{ version }}.tar.gz
-  sha256: 07fb6d9339d2f350735c91671be8e874d160018cc6b688f9efd9d558d237f69f
+  sha256: 2fcb38dc062e440f1e06c069bbca840ed46dcc8f983e473e1558fcc38384ee6b
 
 build:
   number: 0
