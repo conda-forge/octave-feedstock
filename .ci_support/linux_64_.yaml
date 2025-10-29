@@ -63,11 +63,11 @@ libsndfile:
 libxml2:
 - '2.13'
 mkl:
-- '2024'
+- '2025'
 ncurses:
 - '6'
 openssl:
-- '3'
+- '3.5'
 pcre:
 - '8'
 perl:
