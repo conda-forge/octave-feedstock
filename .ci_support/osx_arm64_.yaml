@@ -41,7 +41,7 @@ glpk:
 hdf5:
 - 1.14.6
 icu:
-- '75'
+- '78'
 libblas:
 - 3.9.* *netlib
 libcblas:
@@ -67,7 +67,7 @@ macos_machine:
 ncurses:
 - '6'
 openssl:
-- '3'
+- '3.5'
 pcre:
 - '8'
 perl:
