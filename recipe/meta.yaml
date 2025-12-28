@@ -79,7 +79,7 @@ requirements:
     - texinfo
     - gl2ps
     - fltk
-    - libiconv <=1.17
+    - libiconv
     - alsa-lib  # [linux]
     - rapidjson
     - xorg-libxrender  # [linux]
