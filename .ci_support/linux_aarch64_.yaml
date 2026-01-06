@@ -60,12 +60,12 @@ libpng:
 - '1.6'
 libsndfile:
 - '1.2'
-libxml2:
-- '2.13'
+libxml2_devel:
+- '2.14'
 ncurses:
 - '6'
 openssl:
-- '3'
+- '3.5'
 pcre:
 - '8'
 perl:

@@ -11,7 +11,7 @@ source:
   sha256: 2fcb38dc062e440f1e06c069bbca840ed46dcc8f983e473e1558fcc38384ee6b
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   binary_has_prefix_files:   # [linux]
     - bin/octave-{{ version }}  # [linux]
@@ -71,7 +71,7 @@ requirements:
     - icu
     - ncurses
     - liblzma-devel
-    - libxml2
+    - libxml2-devel
     - libpng
     - glib
     - qt-main
@@ -79,7 +79,7 @@ requirements:
     - texinfo
     - gl2ps
     - fltk
-    - libiconv <=1.17
+    - libiconv
     - alsa-lib  # [linux]
     - rapidjson
     - xorg-libxrender  # [linux]
@@ -117,7 +117,7 @@ requirements:
     - icu
     - ncurses
     - liblzma-devel
-    - libxml2
+    - libxml2-devel
     - libpng
     - glib
     - qt-main
