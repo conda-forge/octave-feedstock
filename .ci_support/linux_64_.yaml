@@ -50,6 +50,8 @@ libcblas:
 - 3.9.* *netlib
 libcurl:
 - '8'
+libiconv:
+- '1'
 liblapack:
 - 3.9.* *netlib
 liblapacke:
@@ -63,7 +65,7 @@ libsndfile:
 libxml2_devel:
 - '2.14'
 mkl:
-- '2024'
+- '2025'
 ncurses:
 - '6'
 openssl:
