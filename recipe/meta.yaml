@@ -1,5 +1,14 @@
 {% set version = "10.3.0" %}
 
+# shut up linter (who thinks libblas can be undefined)
+{% set blas_pin = libblas if libblas is undefined else "" %}
+
+# strip off build string for default netlib variant; we want MKL on linux-64
+{% set blas_pin = libblas.split(" ")[0] ~ " *mkl" if libblas else "" %}  # [linux64]
+
+# fake selector so conda-build detects libblas as a used variable, so that variants get populated
+# [libblas]
+
 package:
   name: octave
   version: {{ version }}
@@ -39,10 +48,10 @@ requirements:
     - {{ cdt('libselinux') }}  # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
   host:
-    - libblas
-    - libcblas
-    - liblapack
-    - liblapacke
+    - libblas    {{ blas_pin }}
+    - libcblas   {{ blas_pin }}
+    - liblapack  {{ blas_pin }}
+    - liblapacke {{ blas_pin }}
     - libglu  # [linux]
     - pcre
     - ghostscript
