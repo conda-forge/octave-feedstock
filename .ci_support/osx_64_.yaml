@@ -41,13 +41,15 @@ glpk:
 hdf5:
 - 1.14.6
 icu:
-- '75'
+- '78'
 libblas:
 - 3.9.* *netlib
 libcblas:
 - 3.9.* *netlib
 libcurl:
 - '8'
+libiconv:
+- '1'
 liblapack:
 - 3.9.* *netlib
 liblapacke:
