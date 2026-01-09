@@ -43,7 +43,7 @@ requirements:
     - llvm-openmp  # [osx]
     - bison
     - gperf
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - libgl-devel  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
