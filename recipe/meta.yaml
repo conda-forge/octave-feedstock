@@ -20,7 +20,7 @@ source:
   sha256: 2fcb38dc062e440f1e06c069bbca840ed46dcc8f983e473e1558fcc38384ee6b
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   binary_has_prefix_files:   # [linux]
     - bin/octave-{{ version }}  # [linux]
@@ -43,7 +43,7 @@ requirements:
     - llvm-openmp  # [osx]
     - bison
     - gperf
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - libgl-devel  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
@@ -83,7 +83,7 @@ requirements:
     - libxml2-devel
     - libpng
     - glib
-    - qt-main
+    - qt6-main
     - openssl
     - texinfo
     - gl2ps
@@ -129,7 +129,7 @@ requirements:
     - libxml2-devel
     - libpng
     - glib
-    - qt-main
+    - qt6-main
     - openssl
 
 test:
