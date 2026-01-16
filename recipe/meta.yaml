@@ -1,58 +1,57 @@
-{% set version = "10.3.0" %}
-
-# shut up linter (who thinks libblas can be undefined)
-{% set blas_pin = libblas if libblas is undefined else "" %}
-
-# strip off build string for default netlib variant; we want MKL on linux-64
-{% set blas_pin = libblas.split(" ")[0] ~ " *mkl" if libblas else "" %}  # [linux64]
-
-# fake selector so conda-build detects libblas as a used variable, so that variants get populated
-# [libblas]
+context:
+  version: "10.3.0"
 
 package:
   name: octave
-  version: {{ version }}
+  version: ${{ version }}
 
 source:
-  url:
-    - https://ftp.gnu.org/gnu/octave/octave-{{ version }}.tar.gz
-    - https://ftpmirror.gnu.org/octave/octave-{{ version }}.tar.gz
-  sha256: 2fcb38dc062e440f1e06c069bbca840ed46dcc8f983e473e1558fcc38384ee6b
+  - url: https://ftp.gnu.org/gnu/octave/octave-${{ version }}.tar.gz
+    sha256: 2fcb38dc062e440f1e06c069bbca840ed46dcc8f983e473e1558fcc38384ee6b
+  - url: https://ftpmirror.gnu.org/octave/octave-${{ version }}.tar.gz
+    sha256: 2fcb38dc062e440f1e06c069bbca840ed46dcc8f983e473e1558fcc38384ee6b
 
 build:
   number: 2
-  skip: true  # [win]
-  binary_has_prefix_files:   # [linux]
-    - bin/octave-{{ version }}  # [linux]
-  run_exports:
-    - {{ pin_subpackage('octave', max_pin='x') }}
+  skip:
+    - if: win
+      then: true
+
+  binary_has_prefix_files:
+    - if: linux
+      then:
+        - bin/octave-${{ version }}
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
-    - {{ compiler('cxx') }}
-    - {{ compiler('fortran') }}
+    - ${{ compiler("c") }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler("cxx") }}
+    - ${{ compiler("fortran") }}
     - make
     - automake
     - sed
     - perl
     - ghostscript
-    - pkg-config  # [linux or (build_platform != target_platform)]
-    - libgomp     # [linux]
-    - llvm-openmp  # [osx]
+    - pkg-config
     - bison
     - gperf
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - if: linux
+      then:
+        - libgomp
+        - ${{ cdt("mesa-libgl-devel") }}
+        - ${{ cdt("mesa-dri-drivers") }}
+        - ${{ cdt("libselinux") }}
+        - ${{ cdt("xorg-x11-proto-devel") }}
+    - if: osx
+      then:
+        - llvm-openmp
+
   host:
-    - libblas    {{ blas_pin }}
-    - libcblas   {{ blas_pin }}
-    - liblapack  {{ blas_pin }}
-    - liblapacke {{ blas_pin }}
-    - libglu  # [linux]
+    - libblas
+    - libcblas
+    - liblapack
+    - liblapacke
     - pcre
     - ghostscript
     - pkg-config
@@ -75,8 +74,6 @@ requirements:
     - qscintilla2
     - qhull
     - graphicsmagick
-    - mkl  # [linux64]
-    # Following gets linked at the end.
     - icu
     - ncurses
     - liblzma-devel
@@ -89,40 +86,44 @@ requirements:
     - gl2ps
     - fltk
     - libiconv
-    - alsa-lib  # [linux]
     - rapidjson
-    - xorg-libxrender  # [linux]
-    - xorg-libxfixes   # [linux]
-    - xorg-libx11      # [linux]
-    - xorg-libxext     # [linux]
-    - xorg-libxfixes   # [linux]
+    - if: linux
+      then:
+        - libglu
+        - alsa-lib
+        - xorg-libxrender
+        - xorg-libxfixes
+        - xorg-libx11
+        - xorg-libxext
+        - mkl
+    - if: linux and target_platform == "linux-64"
+      then:
+        - mkl
+
   run:
     - ghostscript
     - texinfo
     - gl2ps
-    - libglu  # [linux]
     - fltk
     - pcre
     - readline
     - arpack
     - curl
     - sundials
-    - {{ pin_compatible("fftw", max_pin="x.x") }}
+    - ${{ pin_compatible("fftw", upper_bound="x.x") }}
     - fontconfig
     - freetype
     - glpk
     - gnuplot
     - hdf5
-    - {{ pin_compatible("suitesparse", max_pin="x.x") }}
+    - ${{ pin_compatible("suitesparse", upper_bound="x.x") }}
     - zlib
     - bzip2
-    - {{ pin_compatible("portaudio") }}
+    - ${{ pin_compatible("portaudio") }}
     - libsndfile
-    - {{ pin_compatible("qscintilla2", max_pin="x.x") }}
+    - ${{ pin_compatible("qscintilla2", upper_bound="x.x") }}
     - qhull
-    - {{ pin_compatible("graphicsmagick") }}
-    - mkl  # [linux64]
-    # Following gets linked at the end.
+    - ${{ pin_compatible("graphicsmagick") }}
     - icu
     - ncurses
     - liblzma-devel
@@ -131,24 +132,29 @@ requirements:
     - glib
     - qt-main
     - openssl
+    - if: linux
+      then:
+        - libglu
+        - mkl
 
-test:
-  requires:
-    - coreutils
-  commands:
-    - octave --version
-    - touch test_file.txt
-    - octave test_file.txt
-    - octave --eval "imwrite(uint8(rand(20,20,3).*255),'test.jpg')"
-    - octave --eval "help pkg"
-    - octave --eval "path"
+tests:
+  - requirements:
+     run:
+      - coreutils
+    script: |
+      octave --version
+      touch test_file.txt
+      octave test_file.txt
+      octave --eval "imwrite(uint8(rand(20,20,3).*255),'test.jpg')"
+      octave --eval "help pkg"
+      octave --eval "path"
 
 about:
-  home: https://www.gnu.org/software/octave/
+  homepage: https://www.gnu.org/software/octave/
   license: GPL-3.0-or-later
   license_file: COPYING
-  doc_url: https://www.gnu.org/software/octave/doc/interpreter/
   summary: GNU Octave is a high-level language, primarily intended for numerical computations
+  documentation: https://www.gnu.org/software/octave/doc/interpreter/
 
 extra:
   recipe-maintainers:
