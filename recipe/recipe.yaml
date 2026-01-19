@@ -17,10 +17,12 @@ build:
     - if: win
       then: true
 
-  binary_has_prefix_files:
-    - if: linux
-      then:
-        - bin/octave-${{ version }}
+  prefix_detection:
+    binary:
+      - if: linux
+        then:
+          - bin/octave-${{ version }}
+
 
 requirements:
   build:
