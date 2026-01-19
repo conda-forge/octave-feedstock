@@ -18,10 +18,11 @@ build:
       then: true
 
   prefix_detection:
-    binary:
-      - if: linux
-        then:
-          - bin/octave-${{ version }}
+    force_file_type:
+      binary:
+        - if: linux
+          then:
+            - bin/octave-${{ version }}
 
 
 requirements:
