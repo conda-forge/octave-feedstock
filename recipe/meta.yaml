@@ -44,6 +44,7 @@ requirements:
     - liblapack
     - liblapacke
     - libglu  # [linux]
+    - libgl-devel  # [linux]
     - pcre
     - ghostscript
     - pkg-config
