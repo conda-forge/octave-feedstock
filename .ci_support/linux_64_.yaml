@@ -46,10 +46,16 @@ icu:
 - '75'
 libblas:
 - 3.9.* *netlib
+libcblas:
+- 3.9.* *netlib
 libcurl:
 - '8'
 libiconv:
 - '1'
+liblapack:
+- 3.9.* *netlib
+liblapacke:
+- 3.9.* *netlib
 liblzma_devel:
 - '5'
 libpng:
@@ -58,8 +64,6 @@ libsndfile:
 - '1.2'
 libxml2_devel:
 - '2.14'
-mkl:
-- '2025'
 ncurses:
 - '6'
 openssl:
