@@ -1,14 +1,5 @@
 {% set version = "10.3.0" %}
 
-# shut up linter (who thinks libblas can be undefined)
-{% set blas_pin = libblas if libblas is undefined else "" %}
-
-# strip off build string for default netlib variant; we want MKL on linux-64
-{% set blas_pin = libblas.split(" ")[0] ~ " *mkl" if libblas else "" %}  # [linux64]
-
-# fake selector so conda-build detects libblas as a used variable, so that variants get populated
-# [libblas]
-
 package:
   name: octave
   version: {{ version }}
@@ -20,7 +11,7 @@ source:
   sha256: 2fcb38dc062e440f1e06c069bbca840ed46dcc8f983e473e1558fcc38384ee6b
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   binary_has_prefix_files:   # [linux]
     - bin/octave-{{ version }}  # [linux]
@@ -43,16 +34,13 @@ requirements:
     - llvm-openmp  # [osx]
     - bison
     - gperf
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
   host:
-    - libblas    {{ blas_pin }}
-    - libcblas   {{ blas_pin }}
-    - liblapack  {{ blas_pin }}
-    - liblapacke {{ blas_pin }}
+    - libblas
+    - libcblas
+    - liblapack
+    - liblapacke
     - libglu  # [linux]
+    - libgl-devel  # [linux]
     - pcre
     - ghostscript
     - pkg-config
@@ -75,7 +63,6 @@ requirements:
     - qscintilla2
     - qhull
     - graphicsmagick
-    - mkl  # [linux64]
     # Following gets linked at the end.
     - icu
     - ncurses
@@ -91,6 +78,7 @@ requirements:
     - libiconv
     - alsa-lib  # [linux]
     - rapidjson
+    - xorg-xorgproto   # [linux]
     - xorg-libxrender  # [linux]
     - xorg-libxfixes   # [linux]
     - xorg-libx11      # [linux]
@@ -121,7 +109,6 @@ requirements:
     - {{ pin_compatible("qscintilla2", max_pin="x.x") }}
     - qhull
     - {{ pin_compatible("graphicsmagick") }}
-    - mkl  # [linux64]
     # Following gets linked at the end.
     - icu
     - ncurses
