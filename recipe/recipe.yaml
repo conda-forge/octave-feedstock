@@ -51,10 +51,18 @@ requirements:
         - llvm-openmp
 
   host:
-    - libblas
-    - libcblas
-    - liblapack
-    - liblapacke
+    - if: linux and target_platform == "linux-64"
+      then:
+        - libblas * *mkl
+        - libcblas * *mkl
+        - liblapack * *mkl
+        - liblapacke * *mkl
+    - if: not (linux and target_platform == "linux-64")
+      then:
+        - libblas
+        - libcblas
+        - liblapack
+        - liblapacke
     - pcre
     - ghostscript
     - pkg-config
