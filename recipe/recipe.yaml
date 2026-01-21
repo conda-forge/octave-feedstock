@@ -51,18 +51,10 @@ requirements:
         - llvm-openmp
 
   host:
-    - if: linux and target_platform == "linux-64"
-      then:
-        - libblas * *mkl
-        - libcblas * *mkl
-        - liblapack * *mkl
-        - liblapacke * *mkl
-    - if: not (linux and target_platform == "linux-64")
-      then:
-        - libblas
-        - libcblas
-        - liblapack
-        - liblapacke
+    - libblas
+    - libcblas
+    - liblapack
+    - liblapacke
     - pcre
     - ghostscript
     - pkg-config
@@ -101,15 +93,13 @@ requirements:
     - if: linux
       then:
         - libglu
+        - libgl-devel
         - alsa-lib
+        - xorg-xorgproto
         - xorg-libxrender
         - xorg-libxfixes
         - xorg-libx11
         - xorg-libxext
-        - mkl
-    - if: linux and target_platform == "linux-64"
-      then:
-        - mkl
 
   run:
     - ghostscript
@@ -146,7 +136,6 @@ requirements:
     - if: linux
       then:
         - libglu
-        - mkl
 
 tests:
   - requirements:
