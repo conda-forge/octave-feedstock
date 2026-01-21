@@ -1,5 +1,6 @@
 context:
   version: "10.3.0"
+  major: 10
 
 package:
   name: octave
@@ -136,6 +137,9 @@ requirements:
     - if: linux
       then:
         - libglu
+
+  run_exports:
+    - octave >=${{ major }},<${{ major | int + 1 }}
 
 tests:
   - requirements:
