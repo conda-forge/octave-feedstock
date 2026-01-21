@@ -13,7 +13,7 @@ source:
   sha256: 2fcb38dc062e440f1e06c069bbca840ed46dcc8f983e473e1558fcc38384ee6b
 
 build:
-  number: 2
+  number: 3
   skip:
     - if: win
       then: true
