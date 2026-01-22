@@ -13,7 +13,7 @@ source:
   sha256: 2fcb38dc062e440f1e06c069bbca840ed46dcc8f983e473e1558fcc38384ee6b
 
 build:
-  number: 3
+  number: 4
   skip:
     - if: win
       then: true
@@ -43,10 +43,6 @@ requirements:
     - if: linux
       then:
         - libgomp
-        - ${{ cdt("mesa-libgl-devel") }}
-        - ${{ cdt("mesa-dri-drivers") }}
-        - ${{ cdt("libselinux") }}
-        - ${{ cdt("xorg-x11-proto-devel") }}
     - if: osx
       then:
         - llvm-openmp
