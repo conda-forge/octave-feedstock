@@ -12,8 +12,6 @@ c_stdlib:
 - sysroot
 c_stdlib_version:
 - '2.17'
-cdt_name:
-- conda
 channel_sources:
 - conda-forge
 channel_targets:
@@ -64,8 +62,6 @@ libsndfile:
 - '1.2'
 libxml2_devel:
 - '2.14'
-mkl:
-- '2025'
 ncurses:
 - '6'
 openssl:
