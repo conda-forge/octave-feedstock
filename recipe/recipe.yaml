@@ -135,7 +135,7 @@ requirements:
         - libglu
 
   run_exports:
-    - octave >=${{ major }},<${{ major | int + 1 }}
+    - ${{ pin_subpackage("octave", upper_bound="x") }}
 
 tests:
   - requirements:
