@@ -70,8 +70,8 @@ portaudio:
 - '19.7'
 qhull:
 - '2020.2'
-qt_main:
-- '5.15'
+qt6_main:
+- '6.9'
 readline:
 - '8'
 suitesparse:
