@@ -1,0 +1,90 @@
+alsa_lib:
+- '1.2'
+arpack:
+- '3.9'
+bzip2:
+- '1'
+c_compiler:
+- gcc
+c_compiler_version:
+- '14'
+c_stdlib:
+- sysroot
+c_stdlib_version:
+- '2.17'
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+curl:
+- '8'
+cxx_compiler:
+- gxx
+cxx_compiler_version:
+- '14'
+docker_image:
+- quay.io/condaforge/linux-anvil-x86_64:alma9
+fftw:
+- '3'
+fontconfig:
+- '2'
+fortran_compiler:
+- gfortran
+fortran_compiler_version:
+- '14'
+freetype:
+- '2'
+glib:
+- '2'
+glpk:
+- '5.0'
+hdf5:
+- '2'
+icu:
+- '75'
+libblas:
+- 3.9.* *netlib
+libcblas:
+- 3.9.* *netlib
+libcurl:
+- '8'
+libiconv:
+- '1'
+liblapack:
+- 3.9.* *netlib
+liblapacke:
+- 3.9.* *netlib
+liblzma_devel:
+- '5'
+libpng:
+- '1.6'
+libsndfile:
+- '1.2'
+libxml2_devel:
+- '2.14'
+ncurses:
+- '6'
+openssl:
+- '3.5'
+pcre:
+- '8'
+perl:
+- 5.32.1
+portaudio:
+- '19.7'
+qhull:
+- '2020.2'
+qt_main:
+- '5.15'
+readline:
+- '8'
+suitesparse:
+- '7'
+target_platform:
+- linux-64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
+  - fortran_compiler_version
+zlib:
+- '1'
