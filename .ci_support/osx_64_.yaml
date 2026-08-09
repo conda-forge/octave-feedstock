@@ -84,6 +84,8 @@ readline:
 - '8'
 suitesparse:
 - '7'
+sundials:
+- '7.8'
 target_platform:
 - osx-64
 zip_keys:
