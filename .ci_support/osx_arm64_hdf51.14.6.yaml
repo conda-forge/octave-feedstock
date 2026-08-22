@@ -9,7 +9,7 @@ bzip2:
 c_compiler:
 - clang
 c_compiler_version:
-- '19'
+- '21'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -23,7 +23,7 @@ curl:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '19'
+- '21'
 fftw:
 - '3'
 fontconfig:
@@ -31,7 +31,7 @@ fontconfig:
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '14'
+- '15'
 freetype:
 - '2'
 glib:
@@ -41,7 +41,7 @@ glpk:
 hdf5:
 - 1.14.6
 icu:
-- '75'
+- '78'
 libblas:
 - 3.9.* *netlib
 libcblas:
@@ -61,11 +61,11 @@ libpng:
 libsndfile:
 - '1.2'
 libxml2_devel:
-- '2.14'
+- '2.15'
 llvm_openmp:
-- '19'
+- '21'
 macos_machine:
-- x86_64-apple-darwin13.4.0
+- arm64-apple-darwin20.0.0
 ncurses:
 - '6'
 openssl:
@@ -84,8 +84,10 @@ readline:
 - '8'
 suitesparse:
 - '7'
+sundials:
+- '7.8'
 target_platform:
-- osx-64
+- osx-arm64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
